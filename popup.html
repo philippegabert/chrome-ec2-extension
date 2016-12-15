@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<title>Amazon EC2 Management</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/nice-select.css">
+
+<script src="scripts/aws-sdk-2.7.13_custom.min.js"></script>
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="scripts/crypto-js/core-min.js"></script>
+<script src="scripts/crypto-js/aes.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/jquery.tablesorter.min.js"></script>
+<script src="scripts/instances_mgt.js"></script>
+<script src="scripts/popup.js"></script>
+</head>
+<body style="width: 750px;">
+	<div id="container_top_menu">
+	    
+		<div id="account_info">
+			
+			<div>Account ID: <div id="account_id" class="account_info_data"></div></div>
+			<div>Region: <div id="account_region" class="account_info_data">
+				<select id="ec2_region" class="small region">
+					<option value="us-east-1">US East (N. Virginia)</option>
+					<option value="us-east-2">US East (Ohio)</option>
+					<option value="us-west-1">US West (N. California)</option>
+					<option value="us-west-2">US West (Oregon)</option>
+					<option value="eu-west-1">EU (Ireland)</option>
+					<option value="eu-central-1">EU (Frankfurt)</option>
+					<option value="ap-northeast-1">Asia Pacific (Tokyo)</option>
+					<option value="ap-northeast-2">Asia Pacific (Seoul)</option>
+					<option value="ap-southeast-1">Asia Pacific (Singapore)</option>
+					<option value="ap-southeast-2">Asia Pacific (Sydney)</option>
+					<option value="ap-south-1">Asia Pacific (Mumbai)</option>
+					<option value="sa-east-1">South America (São Paulo)</option>
+					<option value="ca-central-1">Canada (Central)</option>
+				</select>
+			</div></div>
+			<div>Name: <div id="account_name" class="account_info_data"></div></div>
+			
+		</div>
+	
+		<div id="usage_info" class="usage_info">
+			<img src="images/heart_dollar.png" height="32px" style="vertical-align:middle"><br>You seem to like the extension a lot ! 
+		    	Please consider making a donation :)
+		</div>
+		<div id="loading" style="text-align:center;float:left; width: 120px;">
+			<img src="images/load.gif" alt="Loading..." width="32" class="img_loading" />Fetching data...
+		</div>
+		
+	</div>
+	<div id="info_div">
+		<div id="info_data"></div>
+		<br>
+		<p>
+			<div><button id="go-to-options" class="option_button">Go to options</button></div>
+		</p>
+	</div>
+	<br/>
+	<div id="ec2_list">
+		<table id="ec2_instances" style="display:none;table-layout:fixed;" class="tablesorter">
+			<thead>
+				<tr>
+					<th class="th_name">Name</th>
+					<th class="th_id">ID</th>
+					<th class="th_private_ip">Private IP</th>
+					<th class="th_public_ip">Public IP</th>
+					<!-- th class="th_availability_zone">Avail. zone</th> -->
+					<th class="th_type">Type</th>
+					<th class="th_state">State</th>
+					<th class="th_refresh"><div id="img_refresh"><img id="refresh_data" class="refresh" src="images/refresh.png" title="Refresh all data"/></div></th>
+				</tr>	
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+</body>
+</html>
+

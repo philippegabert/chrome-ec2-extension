@@ -1,0 +1,303 @@
+body {
+	font-family: Century Gothic, sans-serif;
+	font-size: 10px;
+	height:500px;
+}
+
+.usage_info
+{
+	width: 210px; 
+	display: none; 
+	float:left;
+	cursor: pointer;
+	font-weight: bold;
+	color: #FF8C00;
+	text-align: center;
+	font-size: 10px;
+}
+#options, #accessKeyId, #secretAccessKey, .donations, .credits
+{
+	font-family: Century Gothic, sans-serif;
+	font-size: 14px;
+	width: 400px;
+	line-height: 24px;
+	padding: 5px;
+	border-radius: 5px;
+  	border: solid 1px #e8e8e8;
+}
+#options
+{
+	width: 500px;
+	text-align: center;
+}
+
+button
+{
+	font-family: Century Gothic, sans-serif;
+	font-size: 14px;
+	padding: 5px;
+	
+}
+.save_options
+{
+	text-align: center;
+	margin-top: 50px;
+}
+.nice-select.wide
+{
+	width: 400px!important;
+	margin-left: 50px;
+}
+
+#ec2_list {
+	
+}
+
+#loading {
+	display: none;
+	text-align: center;
+}
+img.img_loading, img.refresh 
+{
+	vertical-align:middle;
+}
+
+img.refresh 
+{
+	height: 14px;
+	cursor: pointer;
+}
+div.msg_INFO
+{
+	color: #000000;
+}
+div.msg_ERROR
+{
+	color: #FF0000;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+  
+}
+
+#ec2_instances tr
+{
+	height: 25px;
+}
+th, td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.th_name
+{
+	width: 250px;
+}
+.td_instanceid
+{
+	width: 75px;
+	font-size: 10px;
+}
+#ec2_instances tr:nth-child(odd) td{
+   /* styles here
+   background-color: #F6F6F6; */
+}
+#ec2_instances tr:nth-child(even) td{
+   /* styles here */
+}
+
+#ec2_instances tr:hover td {
+	background-color: #F6F6F6;
+}
+#ec2_instances tr:hover td > .instance_name_input:disabled{
+	background-color: #F6F6F6;
+}
+
+#info_data, #img_refresh
+{
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#img_refresh
+{
+	display: none;
+}
+#info_div
+{
+	display:none; 
+	float:left;
+	width: 100%;
+}
+.instance_status
+{
+	cursor: pointer;
+	vertical-align: middle;
+	padding-right: 2px;
+}
+.img_refresh_instance
+{
+	cursor: pointer;
+	width: 14px;
+}
+
+#account_info
+{
+	font-size: 10px;
+	float: right;
+	display: none;
+	line-height: 24px;
+}
+#account_info div
+{
+	float: right;
+	padding-right: 5px;
+	
+}
+.account_info_data
+{
+	padding-left: 5px;
+	border-right: solid 1px #CCC;
+	font-weight: bold;
+}
+
+#account_region
+{
+	
+}
+.options_info
+{
+	font-style: italic;
+	text-align: center;
+	font-size: 10px;
+}
+.edit_icon{
+    display: none;
+    vertical-align:middle;
+    height: 12px;
+	cursor: pointer;
+	margin-top: 2px;
+}
+tr:hover .edit_icon{
+    display: block;
+}
+.option_button
+{
+	display: none;
+	height: 24px;
+	line-height: 12px;
+	font-size: 12px;
+	
+}
+.instance_name_input
+{
+	font-family: Century Gothic, sans-serif;
+	font-size: 10px;
+	border-color:#cccccc; 
+	padding:2px; 
+	width: 197px;
+	border-width:1px; 
+	border-radius:3px; 
+	border-style:solid;
+}
+.instance_name_input:disabled
+{
+	border-color:#cccccc; 
+	background-color: #FFF;
+	color: #000;
+	padding:2px; 
+	border-width:0px; 
+	border-radius:3px; 
+	border-style:solid;
+}
+
+.instance_name_actions
+{
+	display: none;
+	vertical-align:middle;
+	padding-left: 2px;
+	cursor: pointer;
+	margin-top: 2px;
+}
+
+table.tablesorter thead tr .header {
+	background-image: url(../images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../images/desc.gif);
+}
+#account_id
+{
+	cursor:pointer;
+}
+#account_id:hover
+{
+	text-decoration: underline;
+}
+.th_id
+{
+	width: 110px;
+}
+ .th_private_ip, .th_public_ip, .th_availability_zone
+ {
+ 	width: 75px;
+ }
+ div.instance_state
+ {
+ 	text-transform:capitalize;
+	cursor: pointer;
+ }
+
+ .th_state
+ {
+ 	width: 150px;
+ }
+ .th_type
+ {
+ 	width: 60px;
+ }
+
+ .nice-select.select_instance_state {
+	font-size: 10px;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 5px;
+	margin-right: 0px;
+}
+.nice-select.select_instance_state:after {
+	height: 2px;
+	width: 2px;
+}
+
+.nice-select.select_instance_state .option {
+	line-height: 20px;
+	min-height: 20px;
+}
+
+.div_instance_state
+{
+	text-align: right;
+	line-height: 20px;
+	min-height: 20px;
+	margin-top: -4px;
+	margin-right: -100px;
+}
+
+.donations
+{
+	text-align: center;
+}
+
+.credits
+{
+	font-size: 10px;
+}

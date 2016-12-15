@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head><title>Amazon EC2 Management Configuration Page</title></head>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/nice-select.css">
+<script src="scripts/aws-sdk-2.7.13_custom.min.js"></script>
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/options.js"></script>
+<script src="scripts/crypto-js/core-min.js"></script>
+<script src="scripts/crypto-js/aes.js"></script>
+<body>
+<div style="text-align:center;">
+	<img src="../images/aws.png" title="Amazon Web Services" height="50px" alt="Amazon Web Services">
+</div>
+<br/>
+<div id="options" style="width: 500px; margin: 0 auto;" >
+	<p>
+		Access Key ID :<br>
+		<input type="text" id="accessKeyId">
+	</p>
+	<p>
+		Secret Access Key:<br>
+	 	<input type="text" id="secretAccessKey">
+	</p>
+	
+	<div>
+		Default region:<br>
+		<select id="ec2_regions" class="wide">
+			<option data-display="Select">Select</option>
+			<option value="us-east-1">US East (N. Virginia)</option>
+			<option value="us-east-2">US East (Ohio)</option>
+			<option value="us-west-1">US West (N. California)</option>
+			<option value="us-west-2">US West (Oregon)</option>
+			<option value="eu-west-1">EU (Ireland)</option>
+			<option value="eu-central-1">EU (Frankfurt)</option>
+			<option value="ap-northeast-1">Asia Pacific (Tokyo)</option>
+			<option value="ap-northeast-2">Asia Pacific (Seoul)</option>
+			<option value="ap-southeast-1">Asia Pacific (Singapore)</option>
+			<option value="ap-southeast-2">Asia Pacific (Sydney)</option>
+			<option value="ap-south-1">Asia Pacific (Mumbai)</option>
+			<option value="sa-east-1">South America (São Paulo)</option>
+			<option value="ca-central-1">Canada (Central)</option>
+		</select>
+	</div>
+
+	<div class="save_options">
+		<button id="chk_options">Test credentials</button>
+		<button id="save">Save options</button>
+	</div>
+	
+	<p style="font-size: 10px; font-style: italic">
+		<a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html" target="_blank">How to get the access key id and secret access key ?</a>
+	</p>
+	<div class="options_info">
+		The access key id and secret access key will be encrypted before being saved.
+	</div>
+	<p>
+		<div id="status"></div>
+		<img src="../images/load.gif" id="loading_pic" style="display:none;width:32px"/>
+	</p>
+	
+</div>
+
+<br>
+<div class="donations" style="width: 500px; margin: 0 auto;">
+	You like this extension? Please consider making a donation :) <br>Thanks !
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="CS3DGKEW8LQJ8">
+		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+	</form>
+</div>
+<br>
+<div class="credits" style="width: 500px; margin: 0 auto;">
+	<div>Icons made by <a href="http://www.flaticon.com/authors/minh-hoang" title="Minh Hoang">Minh Hoang</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+	<div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+	<div>Icons made by <a href="http://www.flaticon.com/authors/roundicons-freebies" title="Roundicons Freebies">Roundicons Freebies</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+	<div>Icons made by <a href="http://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+	<div>Custom select by <a href="http://hernansartorio.com/jquery-nice-select"  title="Hernán Sartorio">Hernán Sartorio</a> from <a href="http://hernansartorio.com/jquery-nice-select/" title="JQuery Nice Select">http://hernansartorio.com/jquery-nice-select/</a></div>
+</div>
+</body>
+</html>
