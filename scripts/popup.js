@@ -8,7 +8,10 @@ var accessKeyId;
 var secretAccessKey;
 var region;
 var usageCounter;
+var dataTable;
 // End of global variables
+
+
 
 function restore_options() {
 	console.log("[EC2Mgt] Restoring options...");
@@ -53,8 +56,11 @@ function restore_options() {
 		}
 	});
 }
+
+
 function refresh_data()
 {
+	
     $("#ec2_instances").hide();
     $("#ec2_instances tbody").empty();
     $("#ec2_region").val(region);
@@ -74,8 +80,8 @@ function refresh_data()
 document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById("go-to-options").addEventListener("click", open_options);
 	restore_options();
-	init_sorter();
-	document.getElementById("refresh_data").addEventListener("click", refresh_data);
+	//init_sorter();
+	$("#refresh_data").click(refresh_data);
 });
 
 function open_options()
@@ -88,20 +94,7 @@ function open_options()
 	    window.open(chrome.runtime.getURL('options.html'));
 	  }
 }
-function init_sorter()
-{
-	 $.tablesorter.addParser({
-	        id: 'input',
-	        is: function(s) {
-	            return false;
-	        },
-	        format: function(s, table, cell) {
-	              return $('input', cell).val();
-	        },
-	        type: 'text'
-	    });
 
-}
 function initEC2Config()
 {
 	console.log("[EC2Mgt] Setting up configuration...");
@@ -112,11 +105,6 @@ function initEC2Config()
 	console.log("[EC2Mgt] Using AccessKeyId ["+accessKeyId+"] in region ["+region+"].");
 	AWS.config.region = region;
 	AWS.config.credentials = creds;
-	/*AWS.config.update({
-		  httpOptions: { 
-			  xhrAsync : false
-		  }
-		});*/
 	ec2 = new AWS.EC2();
 	console.log("[EC2Mgt] Configuration set and EC2 client instance created.");
 }
@@ -151,6 +139,9 @@ function writeInfoMessage(level, message)
 	$("#info_data").text(message);
 	$("#info_data").attr('class', "msg_" + level);
 }
+
+
+
 function fetchEC2Instances()
 {
 	console.log("[EC2Mgt] Fetching instances for region ["+region+"]...");
@@ -162,50 +153,109 @@ function fetchEC2Instances()
         } else {
             var currentTime = new Date();
             console.log("[EC2Mgt] Data fetched on ["+currentTime.toString()+"]");
+            
             //writeInfoMessage("INFO","Data fetched on ["+currentTime.toString()+"]");
+            
+            var list_instances = [];
+            var headers;
             // Inspired from https://gist.github.com/d5/8345619
             for(var r=0,rlen=data.Reservations.length; r<rlen; r++) {
                 var reservation = data.Reservations[r];
+            	
                 for(var i=0,ilen=reservation.Instances.length; i<ilen; ++i) {
-                    var instance = reservation.Instances[i];
-                    addOrEditRow(null, instance);
+                	if(r == 0 && i == 0) // very first row only for headers
+            		{
+                		headers = get_headers(reservation.Instances[i]);
+            		}
+                	var name = '';
+                	for(var t=0,tlen=reservation.Instances[i].Tags.length; t<tlen; ++t) {
+                	     if(reservation.Instances[i].Tags[t].Key === 'Name') {
+                	         name = reservation.Instances[i].Tags[t].Value;
+                	     }
+                	}
+                	reservation.Instances[i].DT_RowId = reservation.Instances[i].InstanceId; // Custom row identifier for DataTable
+                	reservation.Instances[i].InstanceName = name; // Name of the instance
+                	list_instances.push(reservation.Instances[i]);
                 }
-            }
-            $("#ec2_instances").tablesorter({
-
-                headers: {
-                    0: {
-                        sorter:'input'
-                    },
-                    6: {
-                        sorter:false
-                    }
-                }
-            });
+            }            
             $("#ec2_instances").show();
+            
             toggleLoading(false);
+            dataTable = $('#ec2_instances').DataTable({
+            	data: list_instances,
+     	        columnDefs: columns_renderer,
+     	        fnDrawCallback: function( oSettings ) {
+     	            set_events();
+     	        }, 
+     	        bDestroy: true
+    	      });
+            
+           
             console.log("[EC2Mgt] Loading ended. "+data.Reservations.length+ " instance(s) retrieved.");
         }
     });
 	
 }
 
+function set_events()
+{
+	$('div[id^=\'div_inst_state_container_\']').unbind( "click" ).click(function () {
+       	$(this).hide();
+       	$("#div_instance_state_select_"+$(this).parent().parent().attr("id")).show();
+	});
+	$('select[id^=\'select_\']').change(function() {
+		changeInstanceState($(this).parent().parent().parent().attr("id"), $(this).val());
+	 });
+	$('select[id^=\'select_\']').niceSelect();
+	
+	$('input[id^=\'instance_name_\']').unbind( "keypress" ).keypress(function (e) {
+   		if (e.which == 13) {
+			  updateName($(this).parent().parent().attr("id"), $("#instance_name_"+$(this).parent().parent().attr("id")).val());
+		  }
+	});
+	$('img[id^=\'instance_edit_\'], img[id^=\'instance_cancel_\']').unbind( "click" ).click(function (e) {
+		toggleEditMode($(this).parent().parent().parent().attr("id"));
+	});
+
+	$('img[id^=\'instance_confirm_\']').unbind( "click" ).click(function (e) {
+		updateName($(this).parent().parent().parent().attr("id"), $("#instance_name_"+$(this).parent().parent().parent().attr("id")).val());
+	});
+	$('img[id^=\'refresh_instance_\']').unbind( "click" ).click(function (e) {
+		fetchEC2InstancesById($(this).parent().parent().attr("id"));
+	});
+	$("#ec2_instances tr td:nth-child(1)").each(function () {
+		$(this).addClass("td_name");
+	});
+	$("#ec2_instances tr td:nth-child(2)").each(function () {
+		$(this).addClass("td_instanceid");
+	});
+	$("#ec2_instances tr td:nth-child(6)").each(function () {
+		$(this).addClass("td_state");
+	});
+	$("#ec2_instances tr td:nth-child(7)").each(function () {
+		$(this).addClass("td_refresh");
+	});
+	$(".td_state").unbind( "mouseleave" ).mouseleave(function() {
+	 var instanceID = $(this).parent().attr("id");
+   		 setTimeout(function () {
+   			 $("#div_instance_state_select_"+instanceID).hide();
+   	    	 $("#div_inst_state_container_"+instanceID).fadeIn();
+   		 }, 5000);
+   	});
+}
 function updateName(instanceId, instanceName)
 {
 	toggleLoadingInstance(instanceId, true);
 	console.log("[EC2Mgt] Updating name of instance [" + instanceId + "] to ["
 			+ instanceName + "]");
 	var params = {
-		Resources : [ /* required */
-		instanceId,
-		/* more items */
-		],
-		Tags : [ /* required */
-		{
-			Key : 'Name',
-			Value : instanceName
-		},
-		/* more items */
+		Resources : [ instanceId ],
+		Tags : 
+		[
+			{
+				Key : 'Name',
+				Value : instanceName
+			}
 		]
 	};
 	ec2.createTags(params, function(err, data) {
@@ -220,166 +270,11 @@ function updateName(instanceId, instanceName)
 		{
 			console.log(data); // successful response
 			toggleLoadingInstance(instanceId, false);
+			$("#instance_name_"+instanceId).prop("disabled", true);
 			fetchEC2InstancesById(instanceId);
 		}
 			
 	});
-}
-
-function addOrEditRow(row_id, instance)
-{
-	var name = '';
-	for(var t=0,tlen=instance.Tags.length; t<tlen; ++t) {
-	     if(instance.Tags[t].Key === 'Name') {
-	         name = instance.Tags[t].Value;
-	     }
-	}
-	
-	var instance_row = $('<tr>')
-	.attr("row_id", instance.InstanceId)
-	.append($('<td>')
-            .append($('<input>')
-            		.attr("id", "instance_name_"+instance.InstanceId)
-            		.attr("type", "text")
-            		.attr("class", "instance_name_input")
-            		.prop('disabled', true)
-            		.attr("maxlength","255")
-                    .val(name))
-                    .keypress(function (e) {
-					  if (e.which == 13) {
-						  updateName($(this).parent().attr("row_id"), $("#instance_name_"+$(this).parent().attr("row_id")).val());
-					  }
-					})
-                    .append($('<div>')
-            			.css("float","right")
-            			.append($('<img>')
-            					.attr("id", "instance_edit_"+instance.InstanceId)
-            					.attr("class", "edit_icon")
-            					.attr('src', '../images/edit.png')
-            					.attr('height', '12')
-            					.click(function() {
-            						toggleEditMode($(this).parent().parent().parent().attr("row_id"));
-							        })
-            					)
-            			.append($('<img>')
-            					.attr("id", "instance_confirm_"+instance.InstanceId)
-            					.attr("class", "instance_name_actions")
-            					.attr('src', '../images/confirm.png')
-            					.attr('title', 'Save')
-            					.attr('height', '14')
-            					.click(function() {
-            						updateName($(this).parent().parent().parent().attr("row_id"), $("#instance_name_"+$(this).parent().parent().parent().attr("row_id")).val());
-							     })
-            					)
-            			.append($('<img>')
-            					.attr("id", "instance_cancel_"+instance.InstanceId)
-            					.attr("class", "instance_name_actions")
-            					.attr('src', '../images/cancel.png')
-            					.attr('title', 'Cancel')
-            					.attr('height', '14')
-            					.click(function() {
-            						toggleEditMode($(this).parent().parent().parent().attr("row_id"));
-							        })
-            					)
-            			)
-        )
-    .append($('<td>')
-    		.attr("name", "instance_id")
-            .text(instance.InstanceId)
-            .attr("class","td_instanceid")
-        )
-     .append($('<td>')
-        .text(instance.PrivateIpAddress)
-    )
-    .append($('<td>')
-        .text(instance.PublicIpAddress)
-        .attr("title", instance.PublicDnsName)
-    )
-    /*.append($('<td>')
-        .text(instance.Placement.AvailabilityZone)
-    )*/
-    .append($('<td>')
-        .text(instance.InstanceType)
-    )
-    .append($('<td>')
-    	.mouseleave(function() {
-    		 var instanceID = $(this).parent().attr("row_id");
-    		 setTimeout(function () {
-    			 $("#div_instance_state_select_"+instanceID).hide();
-    	    	 $("#div_instance_state_"+instanceID).fadeIn();
-    		 }, 5000);
-    	})
-    	.css("text-align","center")
-    	.append($('<div>')
-    			.attr('class', 'instance_state')
-    			.text(instance.State.Name)
-    			.attr('id', 'div_instance_state_'+instance.InstanceId)
-    			.click(function() {
-	            	$(this).hide();
-	            	$("#div_instance_state_select_"+$(this).parent().parent().attr("row_id")).show();
-	            })
-		        .prepend($('<img>')
-		            .attr('src', '../images/states/'+instance.State.Name+'.png')
-		            .attr('class', 'instance_status')
-		            .attr('title', instance.State.Name)
-		            .attr('id', 'img_'+instance.InstanceId)
-		            
-		        ))
-		  .append($('<div>')
-				  .attr("id", 'div_instance_state_select_'+instance.InstanceId)
-				  .attr("class","div_instance_state")
-				  .css("display", "none")
-				  .append($('<select>')
-		        		.change(function() {
-		        			changeInstanceState($(this).parent().parent().parent().attr("row_id"), $(this).val());
-		        		 })
-		        		.attr("id", "select_"+instance.InstanceId)
-		        		.attr("class", "select_instance_state")
-		        		.append($('<option>',{
-		        		    value: "select",
-		        		    text: 'Select'
-		        		}).attr("data-display","Change state")).append($('<option>',{
-		        		    value: "start",
-		        		    text: 'Start'
-		        		}).prop("disabled", !(instance.State.Name != "running" && instance.State.Name != "pending" && instance.State.Name != "terminated")))
-		        		.append($('<option>',{
-		        		    value: "stop",
-		        		    text: 'Stop'
-		        		}).prop("disabled", !(instance.State.Name != "stopped" && instance.State.Name != "shutting-down" && instance.State.Name != "stopping" && instance.State.Name != "terminated")))
-		        		.append($('<option>',{
-		        		    value: "restart",
-		        		    text: 'Restart'
-		        		}).prop("disabled", !(instance.State.Name != "pending" && instance.State.Name != "terminated" && instance.State.Name != "stopped" )))
-		        		.append($('<option>',{
-		        		    value: "terminate",
-		        		    text: 'Terminate'
-		        		}).prop("disabled", !(instance.State.Name != "terminated")))
-		        )
-	        )
-	     )
-        .append($('<td>')
-        	.css("text-align","center")
-    		.append($('<img>')
-    	            .attr('src', '../images/refresh.png')
-    	            .attr('class', 'img_refresh_instance')
-    	            .attr('title', "Refresh this instance")
-    	            .attr('id', 'refresh_instance_'+instance.InstanceId)
-    	            .click(function() {
-    	            	fetchEC2InstancesById($(this).parent().parent().attr("row_id"));
-    	            })
-    	        )
-    );
-	
-	
-	if(row_id == null)
-	{
-		$("#ec2_instances").find('tbody').append(instance_row);
-	}
-	else
-	{
-		$("#ec2_instances").find('tbody > tr[row_id='+row_id+']').replaceWith(instance_row);
-	}
-	$("#select_"+instance.InstanceId).niceSelect();
 }
 
 function toggleEditMode(instance_id)
@@ -393,6 +288,7 @@ function toggleEditMode(instance_id)
 
 function fetchEC2InstancesById(instance_ids)
 {
+	var returnedRow;
 	toggleLoadingInstance(instance_ids, true);
 	console.log("[EC2Mgt] Fetching instances for region ["+region+"] width ids ["+instance_ids+"].");
 	ec2.describeInstances({ InstanceIds: [instance_ids] }, function(err, data) {
@@ -401,6 +297,7 @@ function fetchEC2InstancesById(instance_ids)
         	writeInfoMessage("ERROR", "An error occured while fetching instances data: ["+err.toString()+"]");
         	toggleLoadingInstance(instance_ids, false);
         } else {
+        	var list_instances = [];
         	for(var r=0,rlen=data.Reservations.length; r<rlen; r++) {
                 var reservation = data.Reservations[r];
                 for(var i=0,ilen=reservation.Instances.length; i<ilen; ++i) {
@@ -412,12 +309,13 @@ function fetchEC2InstancesById(instance_ids)
                             name = instance.Tags[t].Value;
                         }
                     }
-                    addOrEditRow(instance.InstanceId, instance);
+                	reservation.Instances[i].DT_RowId = reservation.Instances[i].InstanceId; // Custom row identifier for DataTable
+                	reservation.Instances[i].InstanceName = name; // Name of the instance
+                	dataTable.row( $('tr#'+instance.InstanceId) ).data( reservation.Instances[i] ).draw("page");
                 }
         	}        	
         	toggleLoadingInstance(instance_ids, false);
             console.log("[EC2Mgt] Loading ended. "+data.Reservations.length+ " instance(s) retrieved.");
-          //  $("#ec2_instances").trigger("update"); A garder ?? 
         }
 	  });
 }

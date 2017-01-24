@@ -4,13 +4,14 @@
 <title>Amazon EC2 Management</title>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/nice-select.css">
-
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
 <script src="scripts/aws-sdk-2.7.13_custom.min.js"></script>
 <script src="scripts/jquery-3.1.1.min.js"></script>
 <script src="scripts/crypto-js/core-min.js"></script>
 <script src="scripts/crypto-js/aes.js"></script>
 <script src="scripts/jquery.nice-select.min.js"></script>
-<script src="scripts/jquery.tablesorter.min.js"></script>
+<script src="scripts/jquery.dataTables.min.js"></script>
+<script src="scripts/columns_renderer.js"></script>
 <script src="scripts/instances_mgt.js"></script>
 <script src="scripts/popup.js"></script>
 </head>
@@ -60,18 +61,42 @@
 	</div>
 	<br/>
 	<div id="ec2_list">
-		<table id="ec2_instances" style="display:none;table-layout:fixed;" class="tablesorter">
+		<table id="ec2_instances" class="compact stripe">
 			<thead>
 				<tr>
 					<th class="th_name">Name</th>
 					<th class="th_id">ID</th>
 					<th class="th_private_ip">Private IP</th>
 					<th class="th_public_ip">Public IP</th>
-					<!-- th class="th_availability_zone">Avail. zone</th> -->
 					<th class="th_type">Type</th>
 					<th class="th_state">State</th>
+					<th class="th_PrivateDnsName">PrivateDnsName</th>
+					<th class="th_PublicDnsName">PublicDnsName</th>
+					<th class="th_StateTransitionReason">StateTransitionReason</th>
+					<th class="th_KeyName">KeyName</th>
+					<th class="th_AmiLaunchIndex">AmiLaunchIndex</th>
+					<th class="th_ProductCodes">ProductCodes</th>
+					<th class="th_LaunchTime">LaunchTime</th>
+					<th class="th_Placement">Placement</th>
+					<th class="th_KernelId">KernelId</th>
+					<th class="th_Monitoring">Monitoring</th>
+					<th class="th_SubnetId">SubnetId</th>
+					<th class="th_VpcId">VpcId</th>
+					<th class="th_StateReason">StateReason</th>
+					<th class="th_Architecture">Architecture</th>
+					<th class="th_RootDeviceType">RootDeviceType</th>
+					<th class="th_RootDeviceName">RootDeviceName</th>
+					<th class="th_BlockDeviceMappings">BlockDeviceMappings</th>
+					<th class="th_VirtualizationType">VirtualizationType</th>
+					<th class="th_ClientTokenTags">ClientTokenTags</th>
+					<th class="th_SecurityGroups">SecurityGroups</th>
+					<th class="th_SourceDestCheck">SourceDestCheck</th>
+					<th class="th_Hypervisor">Hypervisor</th>
+					<th class="th_NetworkInterfaces">NetworkInterfaces</th>
+					<th class="th_EbsOptimized">EbsOptimized</th>
+					<th class="th_ImageId">ImageId</th>
 					<th class="th_refresh"><div id="img_refresh"><img id="refresh_data" class="refresh" src="images/refresh.png" title="Refresh all data"/></div></th>
-				</tr>	
+				</tr>
 			</thead>
 			<tbody></tbody>
 		</table>

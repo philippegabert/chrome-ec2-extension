@@ -1,7 +1,7 @@
 body {
 	font-family: Century Gothic, sans-serif;
 	font-size: 10px;
-	height:500px;
+	height:400px;
 }
 
 .usage_info
@@ -50,7 +50,8 @@ button
 }
 
 #ec2_list {
-	
+	width: 750px;
+	overflow-y: auto;
 }
 
 #loading {
@@ -86,19 +87,19 @@ table, th, td {
 
 #ec2_instances tr
 {
-	height: 25px;
+	height: 27px!important;
 }
 th, td {
     padding: 5px;
     border-bottom: 1px solid #ddd;
 }
-.th_name
+.th_name, .td_name
 {
-	width: 250px;
+	width: 265px!important;
 }
 .td_instanceid
 {
-	width: 75px;
+	width: 120px;
 	font-size: 10px;
 }
 #ec2_instances tr:nth-child(odd) td{
@@ -116,7 +117,7 @@ th, td {
 	background-color: #F6F6F6;
 }
 
-#info_data, #img_refresh
+#info_data
 {
 	float: left;
 	padding-left: 5px;
@@ -190,26 +191,38 @@ tr:hover .edit_icon{
 	height: 24px;
 	line-height: 12px;
 	font-size: 12px;
-	
 }
+
+input[type="search" i], select
+{
+	border-color:#cccccc;
+	border-radius:3px; 
+	border-width:1px; 
+	border-radius:3px; 
+	border-style:solid;
+	font-family: Century Gothic, sans-serif;
+	font-size: 10px;
+}
+
 .instance_name_input
 {
 	font-family: Century Gothic, sans-serif;
 	font-size: 10px;
 	border-color:#cccccc; 
 	padding:2px; 
-	width: 190px;
+	width: 200px;
 	border-width:1px; 
 	border-radius:3px; 
 	border-style:solid;
+	margin-left: -4px;
 }
 .instance_name_input:disabled
 {
-	border-color:#cccccc; 
-	background-color: #FFF;
+	border-color:transparent!important; 
+	background-color: transparent!important;
 	color: #000;
 	padding:2px; 
-	border-width:0px; 
+	border-width:1px; 
 	border-radius:3px; 
 	border-style:solid;
 }
@@ -223,18 +236,6 @@ tr:hover .edit_icon{
 	margin-top: 2px;
 }
 
-table.tablesorter thead tr .header {
-	background-image: url(../images/bg.gif);
-	background-repeat: no-repeat;
-	background-position: center right;
-	cursor: pointer;
-}
-table.tablesorter thead tr .headerSortUp {
-	background-image: url(../images/asc.gif);
-}
-table.tablesorter thead tr .headerSortDown {
-	background-image: url(../images/desc.gif);
-}
 #account_id
 {
 	cursor:pointer;
@@ -245,27 +246,38 @@ table.tablesorter thead tr .headerSortDown {
 }
 .th_id
 {
-	width: 110px;
+	width: 90px!important;
 }
- .th_private_ip, .th_public_ip, .th_availability_zone
+ .th_private_ip, .th_public_ip, .th_availability_zone,
+ .td_private_ip, .td_public_ip, .td_availability_zone
  {
- 	width: 75px;
+ 	width: 75px!important;
  }
  div.instance_state
  {
+ 	text-align: center;
+ 	width: 110px!important;
  	text-transform:capitalize;
 	cursor: pointer;
  }
 
  .th_state
  {
- 	width: 150px;
+ 	width: 130px!important;
  }
- .th_type
+ .td_state
  {
- 	width: 60px;
+ 	text-align: center;
+ 	width: 130px!important;
  }
-
+ .th_type, .td_type
+ {
+ 	width: 40px!important;
+ }
+ .th_refresh, .td_refresh
+ {
+ 	width: 10px!important;
+ }
  .nice-select.select_instance_state {
 	font-size: 10px;
 	height: 20px;
