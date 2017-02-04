@@ -3,12 +3,12 @@
 <head><title>Amazon EC2 Management Configuration Page</title></head>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/nice-select.css">
-<script src="scripts/aws-sdk-2.7.13_custom.min.js"></script>
-<script src="scripts/jquery-3.1.1.min.js"></script>
-<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/lib/aws-sdk-2.7.13_custom.min.js"></script>
+<script src="scripts/lib/jquery-3.1.1.min.js"></script>
+<script src="scripts/lib/jquery.nice-select.min.js"></script>
 <script src="scripts/options.js"></script>
-<script src="scripts/crypto-js/core-min.js"></script>
-<script src="scripts/crypto-js/aes.js"></script>
+<script src="scripts/lib/crypto-js/core-min.js"></script>
+<script src="scripts/lib/crypto-js/aes.js"></script>
 <body>
 <div style="text-align:center;">
 	<img src="../images/aws.png" title="Amazon Web Services" height="50px" alt="Amazon Web Services">
@@ -43,8 +43,12 @@
 			<option value="sa-east-1">South America (São Paulo)</option>
 			<option value="ca-central-1">Canada (Central)</option>
 		</select>
+	</div><br/>
+	<div class="interval">
+			Interval (in minutes) to fetch running instances count:<br>
+			<input type="number" id="intervalFetchRunning" min="0" max="999" style="width:50px">
+			<span style="font-size: 10px; font-style: italic">0 means deactivated</span>
 	</div>
-
 	<div class="save_options">
 		<button id="chk_options">Test credentials</button>
 		<button id="save">Save options</button>
