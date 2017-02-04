@@ -15,7 +15,7 @@ body {
 	text-align: center;
 	font-size: 10px;
 }
-#options, #accessKeyId, #secretAccessKey, .donations, .credits
+#options, #accessKeyId, #secretAccessKey, #intervalFetchRunning, .donations, .credits
 {
 	font-family: Century Gothic, sans-serif;
 	font-size: 14px;
@@ -41,7 +41,12 @@ button
 .save_options
 {
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 30px;
+}
+.interval
+{
+	text-align: center;
+	margin-top: 20px;
 }
 .nice-select.wide
 {
