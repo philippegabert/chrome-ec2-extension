@@ -35,6 +35,7 @@ var columns_renderer =
 	},
 	{
 		"data": "PrivateIpAddress",
+		"defaultContent": "<i>Not set</i>",
 		"targets" : 2 // PrivateIpAddress
 	},
 	{
@@ -120,11 +121,13 @@ var columns_renderer =
 	},
 	{
 		"data": "SubnetId",
+		"defaultContent": "<i>Not set</i>",	
 	    "visible": false,
 		"targets" : 16 // SubnetId
 	},
 	{
 		"data": "VpcId",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 17 // VpcId
 	},
@@ -177,6 +180,7 @@ var columns_renderer =
 	},
 	{
 		"data": "SourceDestCheck",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 26 // SourceDestCheck
 	},
