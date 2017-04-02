@@ -19,6 +19,7 @@ var columns_renderer =
 	},
 	{
 		"data": "InstanceName",
+		"defaultContent": "<i>Not set</i>",
 		"targets" : 0, // Instance Id
 		"render": function(data, type, instance) {
 			return "<input id=\"instance_name_"+instance.InstanceId+"\" type=\"text\" class=\"instance_name_input\" disabled maxlength=\"255\" value=\""+data+"\">"
@@ -45,10 +46,12 @@ var columns_renderer =
 	},
 	{
 		"data": "InstanceType",
+		"defaultContent": "<i>Not set</i>",
 		"targets" : 4 // InstanceType
 	},
 	{
 		"data": "State",
+		"defaultContent": "<i>Not set</i>",
 		"render" : function(data, type, row) {
 			var instanceID = row.InstanceId;
 			var instanceStateName = data.Name;
@@ -70,41 +73,49 @@ var columns_renderer =
 	},
 	{
 		"data": "PrivateDnsName",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 6 // PrivateDnsName
 	},
 	{
 		"data": "PublicDnsName",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 7 // PublicDnsName
 	},
 	{
 		"data": "StateTransitionReason",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 8 // StateTransitionReason
 	},
 	{
 		"data": "KeyName",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 9 // KeyName
 	},
 	{
 		"data": "AmiLaunchIndex",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 10 // AmiLaunchIndex
 	},
 	{
 		"data": "ProductCodes",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 11 // ProductCodes
 	},
 	{
 		"data": "LaunchTime",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 12 // LaunchTime
 	},
 	{
 		"data": "Placement",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 13 // Placement
 	},
@@ -116,6 +127,7 @@ var columns_renderer =
 	},
 	{
 		"data": "Monitoring",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 15 // Monitoring
 	},
@@ -134,47 +146,55 @@ var columns_renderer =
 	{
 		"data": "StateReason",
 		"defaultContent": "",
+		"defaultContent": "",
 	    "visible": false,
 		"targets" : 18 // StateReason
 	}
 	,
 	{
 		"data": "Architecture",
+		"defaultContent": "",
 	    "visible": false,
 		"targets" : 19 // Architecture
 	}
 	,
 	{
 		"data": "RootDeviceType",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 20 // RootDeviceType
 	}
 	,
 	{
 		"data": "RootDeviceName",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 21 // RootDeviceName
 	}
 	,
 	{
 		"data": "BlockDeviceMappings",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 22 // BlockDeviceMappings
 	}
 	,
 	{
 		"data": "VirtualizationType",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 23 // VirtualizationType
 	}
 	,
 	{
 		"data": "ClientToken",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 24 // ClientToken
 	},
 	{
 		"data": "SecurityGroups",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 25 // SecurityGroups
 	},
@@ -186,26 +206,31 @@ var columns_renderer =
 	},
 	{
 		"data": "Hypervisor",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 27 // Hypervisor
 	},
 	{
 		"data": "NetworkInterfaces",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 28 // NetworkInterfaces
 	},
 	{
 		"data": "EbsOptimized",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 29 // EbsOptimized
 	},
 	{
 		"data": "ImageId",
+		"defaultContent": "<i>Not set</i>",
 	    "visible": false,
 		"targets" : 30 // ImageId
 	},
 	{
 		"data": "",
+		"defaultContent": "<i>Not set</i>",
 		"orderable": false, 
 	    "render": function(data, type, row) {
 			var instanceID = row.InstanceId;
