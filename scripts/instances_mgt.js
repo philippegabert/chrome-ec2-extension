@@ -44,7 +44,7 @@ function terminateInstance(instance_ids)
 {
 	if (confirm('Are you really sure you want to terminate the instance(s) '+instance_ids+' ?')) {
 		console.log("[EC2Mgt] Terminating instances ["+instance_ids+"]...");
-		/*ec2.terminateInstances({ InstanceIds: [instance_ids] }, function(err, data) {
+		ec2.terminateInstances({ InstanceIds: [instance_ids] }, function(err, data) {
 	        if(err) {
 	        	console.error("[EC2Mgt] An error occured while terminating instance(s): ["+err.toString()+"]");
 	        	writeInfoMessage("ERROR", "An error occured while terminating instance(s): ["+err.toString()+"]");
@@ -53,7 +53,7 @@ function terminateInstance(instance_ids)
 	        	console.log("[EC2Mgt] Instance(s) terminating. ");
 	        	console.log(data);
 	        }
-	    });*/
+	    });
 	} else {
 	    console.log("[EC2Mgt] User has cancelled termination.");
 	}

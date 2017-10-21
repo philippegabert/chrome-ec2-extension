@@ -2,6 +2,7 @@ body {
 	font-family: Century Gothic, sans-serif;
 	font-size: 10px;
 	height:400px;
+	margin-right: 0px;
 }
 
 .usage_info
@@ -21,7 +22,6 @@ body {
 	font-size: 14px;
 	width: 400px;
 	line-height: 24px;
-	padding: 5px;
 	border-radius: 5px;
   	border: solid 1px #e8e8e8;
 }
@@ -55,8 +55,8 @@ button
 }
 
 #ec2_list {
-	width: 750px;
-	overflow-y: auto;
+	width: 780px;
+	margin-left:-5px;
 }
 
 #loading {
@@ -70,7 +70,7 @@ img.img_loading, img.refresh
 
 img.refresh 
 {
-	height: 14px;
+	height: 12px;
 	cursor: pointer;
 }
 div.msg_INFO
@@ -100,7 +100,7 @@ th, td {
 }
 .th_name, .td_name
 {
-	width: 265px!important;
+	min-width: 220px!important;
 }
 .td_instanceid
 {
@@ -114,7 +114,10 @@ th, td {
 #ec2_instances tr:nth-child(even) td{
    /* styles here */
 }
-
+#ec2_instances_wrapper
+{
+	margin-right:0px;
+}
 #ec2_instances tr:hover td {
 	background-color: #F6F6F6;
 }
@@ -147,7 +150,7 @@ th, td {
 .img_refresh_instance
 {
 	cursor: pointer;
-	width: 14px;
+	width: 12px;
 }
 
 #account_info
@@ -251,17 +254,23 @@ input[type="search" i], select
 }
 .th_id
 {
-	width: 90px!important;
+	min-width: 90px!important;
 }
- .th_private_ip, .th_public_ip, .th_availability_zone,
- .td_private_ip, .td_public_ip, .td_availability_zone
- {
- 	width: 75px!important;
- }
+
+.th_customTags,.td_customTags
+{
+	width: 145px!important;
+	min-width: 150px!important;
+}
+.th_ip,.td_ip
+{
+	min-width: 75px!important;
+}
+
  div.instance_state
  {
  	text-align: center;
- 	width: 110px!important;
+ 	min-width: 80px!important;
  	text-transform:capitalize;
 	cursor: pointer;
  }
@@ -281,7 +290,8 @@ input[type="search" i], select
  }
  .th_refresh, .td_refresh
  {
- 	width: 10px!important;
+ 	max-width: 0px!important;
+ 	margin: 0px;
  }
  .nice-select.select_instance_state {
 	font-size: 10px;
@@ -317,4 +327,10 @@ input[type="search" i], select
 .credits
 {
 	font-size: 10px;
+}
+
+.customTags
+{
+	margin: 0;
+    padding: 0;
 }

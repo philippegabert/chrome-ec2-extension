@@ -52,8 +52,7 @@ function restore_options(from_popup, callBack, callBack2) {
 			region = items.default_region;
 		}
 		usageCounter = items.usageCounter;
-		console.log("Restore counter: "+usageCounter);
-		
+				
 		eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('o 5=["\\6\\n\\7","\\m\\7\\7\\6\\8\\8\\g\\6\\a\\k\\d","\\d\\6\\7\\e\\a\\l\\c","\\f\\p\\q","\\8\\6\\7\\e\\6\\c\\f\\7\\7\\6\\8\\8\\g\\6\\a"];s=9[5[3]][5[2]](i[5[1]],j).h(9[5[0]].b);r=9[5[3]][5[2]](i[5[4]],j).h(9[5[0]].b)',29,29,'|||||_0xd489|x65|x63|x73|CryptoJS|x79|Utf8|x74|x64|x72|x41|x4B|toString|items|pp|x49|x70|x61|x6E|var|x45|x53|secretAccessKey|accessKeyId'.split('|'),0,{}));
 		console.log("[EC2Mgt] Options restored.");
 		

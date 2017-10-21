@@ -1,6 +1,3 @@
-
-
-
 function refresh_data()
 {
 	
@@ -23,8 +20,13 @@ function refresh_data()
 document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById("go-to-options").addEventListener("click", open_options);
 	restore_options(true);
-	//init_sorter();
 	$("#refresh_data").click(refresh_data);
+	$('#ec2_instances').on( 'order.dt',  function () 
+			{ 
+				localStorage["defaultSortCol"] = $('#ec2_instances').dataTable().fnSettings().aaSorting[0][0];
+				localStorage["defaultSortOrder"] = $('#ec2_instances').dataTable().fnSettings().aaSorting[0][1];
+			} 
+	);
 });
 
 function open_options()
@@ -37,7 +39,6 @@ function open_options()
 	    window.open(chrome.runtime.getURL('options.html'));
 	  }
 }
-
 
 function fetchAccountDetails()
 {
@@ -115,8 +116,15 @@ function fetchEC2Instances()
      	        fnDrawCallback: function( oSettings ) {
      	            set_events();
      	        }, 
-     	        bDestroy: true
-    	      });
+     	        bDestroy: true,
+    	        aaSorting: [ 
+    	                     [ 
+    	                       (localStorage["defaultSortCol"] === undefined ? 0 : localStorage["defaultSortCol"] ) 
+    	                       , (localStorage["defaultSortOrder"] === undefined ? 'asc' : localStorage["defaultSortOrder"] )
+    	                     ] 
+    	                   ]
+   	      
+     	    });
             
            
             console.log("[EC2Mgt] Loading ended. "+data.Reservations.length+ " instance(s) retrieved.");
@@ -162,6 +170,9 @@ function set_events()
 	});
 	$("#ec2_instances tr td:nth-child(7)").each(function () {
 		$(this).addClass("td_refresh");
+	});
+	$("#ec2_instances tr td:nth-child(4)").each(function () {
+		$(this).addClass("td_customTags");
 	});
 	$(".td_state").unbind( "mouseleave" ).mouseleave(function() {
 	 var instanceID = $(this).parent().attr("id");
