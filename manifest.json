@@ -4,7 +4,7 @@
   "name": "Amazon EC2 Management Chrome Extension",
   "short_name": "EC2 Management",
   "description": "This extension enables management of Amazon EC2 instances",
-  "version": "1.5",
+  "version": "1.6",
   "default_locale": "en",
   "author": "Philippe GABERT",
   	"icons": {
@@ -14,7 +14,7 @@
 		"64": "images/icon64.png"
 	},
   "browser_action": {
-      "default_icon": {                    
+      "default_icon": {
         "16": "images/icon16.png",
         "24": "images/icon24.png",
         "32": "images/icon32.png",
