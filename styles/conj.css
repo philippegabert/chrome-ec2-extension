@@ -1,0 +1,283 @@
+h4 {
+    background-color: #e0e0e8;
+    font-weight: bold;
+    text-align: center;
+    padding: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+#forceDesktop {
+    font-weight: bold;
+}
+#conjtable {
+    margin-left: 3em;
+}
+
+.aa table.neoConj {
+  border-collapse: collapse;
+} 
+
+.aa .neoConj td,.aa .neoConj th {
+  text-align: left;
+}
+
+.aa .neoConj td, .aa .neoConj th {
+  padding: 2px;
+}
+
+.LineBreak {
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width:100%;
+    background-color:#d1d1d1;
+    height:1px;
+    display: inline-block;
+}
+
+.aa {
+    margin-bottom: 1em;
+    clear: both;
+  }
+
+@media all and (min-width: 500px), print
+{
+    #forceDesktop {
+        display:  none;
+    }
+    .aa table.neoConj   {
+        float: left;       
+        display: block;
+        margin-bottom: 0.5em;
+   }
+    .aa .neoConj td {
+      min-width: 8em;
+    }
+
+    .aa .neoConj th {
+      font-weight: normal;
+    }
+    .aa .neoConj th[scope="col"] {
+      text-decoration: underline; 
+    }
+
+    .aa .neoConj:nth-child(2) th[scope="col"] {
+        text-align: center;
+    }
+
+    .aa .neoConj th[scope="row"] {
+      text-align: right;
+      padding-right: 7px;
+      /*width:  6em;*/
+    }
+    .aa .neoConj .arrow {
+        display: none;
+    }
+
+    .aa .neoConj tr:nth-child(8) td, .aa .neoConj tr:nth-child(8) th {
+        padding-top: 0.8em;
+    }
+  
+   .aa table.neoConj ~ table td, 
+   .aa table.neoConj ~ table th  { border-left: 0;  padding-left: 1em;}
+
+
+   .aa table.neoConj ~ table tr:first-child  th:first-child  { /*display: none;*/ }
+   .aa table.neoConj ~ table tr:not(:first-child) th  { display: none; }
+}
+@media screen and (max-width:500px), handheld and (max-width:500px), projection and (max-width:500px), tv and (max-width:500px), tty and (max-width:500px) {
+
+   .aa table.neoConj {
+      width: 100%;
+    }
+
+    .aa .neoConj th {
+        border: 1px #ddd solid;
+        background-color:#e0e0e8;
+    }
+
+    h4 {
+        width: 97%;
+        padding: 5px;
+        font-size: medium;
+        margin: 1em 0 1em 0;
+    }
+
+    .aa table.neoConj {
+      margin: 20px 0;
+    }
+
+    .aa .neoConj td, .aa .neoConj th {
+      padding: 3px;
+    }
+
+    .aa .neoConj th[scope="row"] {
+        width:  8em;
+    }
+
+    .aa .neoConj:not(.active) th[scope="col"] {
+        text-align: center;
+    }
+
+    .aa .neoConj th[scope="col"]:active {
+        background-color: #CCAC00;
+    }
+
+    .neoConj:not(.active) tr:nth-child(n+2) {
+        display: none;
+    }
+
+    .neoConj:not(.active) tr:first-child th:first-child {
+        width:  8em;
+    }
+
+    .neoConj:not(.active) th .arrow:before {
+        content: '\25BC';
+    }
+
+    .neoConj.active th .arrow:before {
+        content: '\25B2';
+    }
+
+    .neoConj tr:first-child th {
+        text-align: center;
+        background-color: #BCBCBC;
+    }
+
+    .neoConj:not(.active) th .arrow2:before {
+        content: '\25BC';
+    }
+
+    .neoConj th .arrow {
+        position: absolute;
+    }
+
+    .neoConj tr:first-child th .arrow:first-child {
+        left: 2em;
+    }
+    .neoConj tr:first-child th .arrow:last-child {
+        right: 2em;
+    }
+
+    /****Rest of the page hidden for mobile******/
+    #header, #noteImport2 {
+        display: none;
+    }
+    #container {
+        width: 100% !important;
+    }
+    .content {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    #text_form {
+        text-align:left !important;
+    }
+    #search input{width:40% !important;}
+
+    #fSelect {
+        width: 138px !important;
+        padding: 9px 0px 8px 0px !important;
+        font-size: 11px !important;
+    }
+
+    #contenttable table td:first-child {
+        display: none;
+    }
+
+    #contenttable table td:nth-child(2) > span:not(.antiquated) {
+        /*display: none;*/
+    }
+
+    #conjtable {
+        margin-left:  0px;
+    }
+    #conjtable td {
+        text-align: left !important;
+    }
+    #conjtable td:nth-child(3) {
+         padding-left: 1.5em !important;
+    }
+
+    #conjtable td:nth-child(4) {
+        padding-left: 0.5em !important;
+    }
+    #conjtable td:nth-child(n+5) {
+        display: none;
+    }
+    #ad1 {
+        display:  none;
+    }
+
+    #openAll {
+        display: block !important;
+        margin:  1em;
+        width: 90%;
+        border-style: none;
+        padding: 5px;
+    }
+}
+
+td {border:0px solid black; font-family: Century Gothic, sans-serif;font-size: 9pt}
+	td.left{white-space:nowrap;}
+	b {color:blue;font-weight:normal;}
+	h3 {margin-bottom:0px;margin-right:5px}
+	ol {margin-top:0px;margin-bottom:0px}
+	form {margin-top:10px}
+	
+	body  {
+	 font-family: Century Gothic, sans-serif;
+	margin: 0;
+	background-color:#FFFFFF}
+	
+	td.namecell {border-bottom: solid black 1px; border-top: solid black 1px; height:50px; 
+	background-color:#5E58C7;padding:0px;padding-left: 5px;}
+	td.searchbox {border-bottom: solid black 1px; background-color:#918CE3; 
+	text-align:center;padding:0px;padding-left: 5px;}
+	table.layout {background-color: #f0f0f8;height:100%;
+	margin-left:auto; margin-right:auto;}
+	
+	i.defect {color: red;font-style:normal;}
+	.antiquated {color: gray;}
+	
+	#search input{width:auto;padding-left:5px;}
+	body, button, input, select, textarea{color:black;}
+	#container{width:900px;display:table;}
+	#nav{font-weight: bold;color: #F7F6FF;font-size: 13px; font-family: Century Gothic, sans-serif;display: inline;}
+
+#text_form{
+	float:none;
+}
+#search input.button{
+	border:none;
+	width: 12px;
+	height: 12px;
+	background-color: #D7D7D7;
+	cursor: pointer;
+	background-position: 5px;
+	line-height: 31px;
+	vertical-align:bottom;
+	background-image:none;
+	position:relative;
+	bottom:-1px;
+}
+
+.inputcontainer{
+	border: solid 1px #B7B7B7;
+	background-color: #D7D7D7;
+	cursor: pointer;
+	background-position: 5px;
+	line-height: 31px;
+	vertical-align:bottom;
+	background-image:none;
+	padding-right:2px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	width:25px;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+.custom-select select{width:175px;}

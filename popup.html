@@ -1,107 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Amazon EC2 Management</title>
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<link rel="stylesheet" type="text/css" href="css/nice-select.css">
-<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
-<script src="scripts/lib/aws-sdk-2.7.13_custom.min.js"></script>
-<script src="scripts/lib/jquery-3.1.1.min.js"></script>
-<script src="scripts/lib/crypto-js/core-min.js"></script>
-<script src="scripts/lib/crypto-js/aes.js"></script>
-<script src="scripts/lib/jquery.nice-select.min.js"></script>
-<script src="scripts/lib/jquery.dataTables.min.js"></script>
-<script src="scripts/columns_renderer.js"></script>
-<script src="scripts/instances_mgt.js"></script>
-<script src="scripts/functions.js"></script>
-<script src="scripts/popup.js"></script>
-</head>
-<body style="width: 790px;">
-	<div id="container_top_menu">
-	    
-		<div id="account_info">
-			
-			<div>Account ID: <div id="account_id" class="account_info_data"></div></div>
-			<div>Region: <div id="account_region" class="account_info_data">
-				<select id="ec2_region" class="small region">
-					<option value="us-east-1">US East (N. Virginia)</option>
-					<option value="us-east-2">US East (Ohio)</option>
-					<option value="us-west-1">US West (N. California)</option>
-					<option value="us-west-2">US West (Oregon)</option>
-					<option value="eu-west-1">EU (Ireland)</option>
-					<option value="eu-west-2">EU (London)</option>
-					<option value="eu-central-1">EU (Frankfurt)</option>
-					<option value="ap-northeast-1">Asia Pacific (Tokyo)</option>
-					<option value="ap-northeast-2">Asia Pacific (Seoul)</option>
-					<option value="ap-southeast-1">Asia Pacific (Singapore)</option>
-					<option value="ap-southeast-2">Asia Pacific (Sydney)</option>
-					<option value="ap-south-1">Asia Pacific (Mumbai)</option>
-					<option value="sa-east-1">South America (São Paulo)</option>
-					<option value="ca-central-1">Canada (Central)</option>
-				</select>
-			</div></div>
-			<div>Name: <div id="account_name" class="account_info_data"></div></div>
-			
-		</div>
+	<title>WordReference.com extension</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles/WRstyle.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	
-		<div id="usage_info" class="usage_info">
-			<img src="images/heart_dollar.png" height="32px" style="vertical-align:middle"><br>You seem to like the extension a lot ! 
-		    	Please consider making a donation :)
-		</div>
-		<div id="loading" style="text-align:center;float:left; width: 120px;">
-			<img src="images/load.gif" alt="Loading..." width="32" class="img_loading" />Fetching data...
-		</div>
-		
-	</div>
-	<div id="info_div">
-		<div id="info_data"></div>
-		<br>
-		<p>
-			<div><button id="go-to-options" class="option_button">Go to options</button></div>
-		</p>
-	</div>
-	<br/>
-	<div id="ec2_list">
-		<table id="ec2_instances" class="compact stripe">
-			<thead>
-				<tr>
-					<th class="th_name">Name</th>
-					<th class="th_id">ID</th>
-					<th class="th_ip">IP Addresses</th>
-					<th class="th_customTags">Custom tags</th>
-					<th class="th_type">Type</th>
-					<th class="th_state">State</th>
-					<th class="th_PrivateDnsName">PrivateDnsName</th>
-					<th class="th_PublicDnsName">PublicDnsName</th>
-					<th class="th_StateTransitionReason">StateTransitionReason</th>
-					<th class="th_KeyName">KeyName</th>
-					<th class="th_AmiLaunchIndex">AmiLaunchIndex</th>
-					<th class="th_ProductCodes">ProductCodes</th>
-					<th class="th_LaunchTime">LaunchTime</th>
-					<th class="th_Placement">Placement</th>
-					<th class="th_KernelId">KernelId</th>
-					<th class="th_Monitoring">Monitoring</th>
-					<th class="th_SubnetId">SubnetId</th>
-					<th class="th_VpcId">VpcId</th>
-					<th class="th_StateReason">StateReason</th>
-					<th class="th_Architecture">Architecture</th>
-					<th class="th_RootDeviceType">RootDeviceType</th>
-					<th class="th_RootDeviceName">RootDeviceName</th>
-					<th class="th_BlockDeviceMappings">BlockDeviceMappings</th>
-					<th class="th_VirtualizationType">VirtualizationType</th>
-					<th class="th_ClientTokenTags">ClientTokenTags</th>
-					<th class="th_SecurityGroups">SecurityGroups</th>
-					<th class="th_SourceDestCheck">SourceDestCheck</th>
-					<th class="th_Hypervisor">Hypervisor</th>
-					<th class="th_NetworkInterfaces">NetworkInterfaces</th>
-					<th class="th_EbsOptimized">EbsOptimized</th>
-					<th class="th_ImageId">ImageId</th>
-					<th class="th_refresh"><div id="img_refresh"><img id="refresh_data" class="refresh" src="images/refresh.png" title="Refresh all data"/></div></th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
-	</div>
-</body>
-</html>
+	<script src="scripts/buy.js"></script>
+	<script src="scripts/global.js"></script>
+	<script src="scripts/scripts.js"></script>
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+</head>
+<body style="width: 550px;">
+	<div class="div_popup">
 
+		<fieldset class="fieldset_popup">
+			<legend>WordReference.com</legend>
+			<div id="divOptionsICO">
+				<img src="images/options.png" width="16" alt="Options" style="vertical-align: middle;" title="Options" id="optionsICO"/>
+			</div>
+			
+			<div id="divHelpICO">
+				<img src="images/help.png" width="16" alt="Help" title="Help" style="vertical-align: middle;" id="helpICO"/>
+			</div>
+			<div id="divReleaseICO">
+				<img src="images/newspaper.png" width="16" alt="What's new" style="vertical-align: middle;"  title="What's new" id="releaseICO"/>
+			</div>
+			<img src="images/history.jpg" width="24" alt="Last queries" id="histoICO"/>
+			
+			<input type="text" name="wordToSearch" id="wordToSearch"/> <!-- Not supported anymore x-webkit-speech="x-webkit-speech" speech="speech" --> 
+			<input type="button" id="butSearch" value="__MSG_buttonSearchText__" />
+			<div id="dropList" style="display: block;">
+				<select tabindex='2' size='1' name='dict' id="dict"></select>
+			</div>
+
+			<form name="radioForm" id="radioForm">
+				<div id="listRadio" style="display: none; text-align:center;"></div>
+			</form>
+		</fieldset>
+
+		<div id="divHisto">
+			<fieldset class="fieldset_histo">
+				<legend id="legendHistory"></legend>
+				<div id="txtHisto"></div>
+			</fieldset>
+		</div>
+
+		<div id="tmpMessageVersion">
+			<fieldset class="fieldset_newversion">
+				<div style="float:left; width: 525px">
+					<div class="new_version_version">
+					v5<span style="font-size: 11px; font-weight: bold;">.7</span>
+					</div>
+					<div class="new_version_details">
+						New version. What should have been a few weeks ended being more than a year!<br/><br/>
+						And... the free searches count has been increased to <span style="font-size: 13px; font-weight: bold; color:#0645ad">20 a day </span>(15 before).<br><br>
+						<i>
+							<a href="#" id="dontShowAgain">Don't show that message again...</a>
+						</i>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div id="msg_didyouknow" style="display: none;" >
+			<fieldset class="fieldset_newversion" id="fieldset_gopremium" style="border: solid 3px #ff9811; background-color:#F5D0A9; font-weight: bold; ">
+				<img src="images/help.png" style="vertical-align: middle;" title="Help" alt="Help"> <i>Did you know that you could translate faster and in an easier way ? <a href="https://www.youtube.com/watch?v=ywa70H6rGZY" style="font-weight: bold;" target="_blank">Learn how-to</a></i>
+				<br>
+				<a href="#" id="goPremium"><img src="images/premium.png" height="24" title="Premium" alt="Premium"><br>Go premium
+				</a>
+			</fieldset>
+		</div>
+		<fieldset id="fieldsetResults" class="fieldsetResults">
+			<div id="remaining_searches"></div>
+			<div class="nav_buttons_container" id="nav_buttons_container">
+				<div class="nav_buttons">
+					<a href="#" id="aBackPage">
+						<img src="images/back.png" id="imgBack" alt="Back" />
+					</a>
+				</div>
+				<div class="nav_buttons">
+					<div id="legend_navbar"></div>
+				</div>
+				<div class="nav_buttons">
+					<a href="#" id="aForwardPage">
+						<img src="images/forward.png" id="imgForward" alt="Next" />
+					</a>
+				</div>
+			</div>
+			<div class="div_loading">
+				<img src="images/ajax-loader.gif" style="display: none;" alt="Loading"
+					id="imgChargement" />
+			</div>
+			<div id="resultat">
+			</div>
+			<div style="text-align:center; width:100%;display: none; cursor: pointer" id="features_unlock">
+			
+				<fieldset class="fieldset_options"  style="height: 200px; margin: 0 auto; border: solid 3px #ff9811; ">
+					<legend id="legendBuy">Unlock all features !</legend>
+					<div style="float: left;">
+						<div style="display: inline-block; width: 64px" >
+							<img src="images/premium.png" width="64" alt="unlock" id="unlock_img" style="vertical-align: bottom;"/>
+						</div>
+						<div style="display: inline-block; width: 250px;">
+							<ul>
+								<li>No search limitation</li>
+								<li>"In-site" search</li>
+								<li>Automatic search on text selection</li>
+								<li>Contextual menu (right click)</li>					
+							</ul>
+						</div>
+						<div id="paypal-button-container">
+						</div>							
+					</div>
+				</fieldset>
+			</div>
+		</fieldset>
+	</div>
+	<div id="dummyspan"></div>
+	<script
+	    src="https://www.paypal.com/sdk/js?client-id=AfZW5nNmWJpyEcuUO5ASxzglyx-JVUUOoOkgSs-B9nj2sU1fRnuqCvL93pK1-TSbCYI10Y7qkes-LdrR&currency=EUR" data-csp-nonce="paypaljs">
+	</script>
+	<script src="scripts/init.js"></script>
+</body>

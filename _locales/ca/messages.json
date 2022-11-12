@@ -1,0 +1,269 @@
+{
+	"about": {
+		"description": "About title in the option page",
+		"message": "About"
+	},
+	"affDefault": {
+		"description": "Text to describe default display of languages",
+		"message": "Visualització per defecte"
+	},
+	"affSelectedText": {
+		"description": "Text to ask if the user wants to have the selected text automaticaly displayed in the search field",
+		"message": "Omplir automàticament el camp de cerca amb la paraula seleccionada en una pàgina.\u003Cbr/>\u003Ci>Només treballar amb HTTP, HTTPS i FTP pàgines.\u003C/i>"
+	},
+	"authorTranslation": {
+		"description": "Name of the author of the translation",
+		"message": "Versió en català: JAVIER SORIANO"
+	},
+	"availableTranslations": {
+		"description": "List of the available translations.",
+		"message": "Traducció disponible:"
+	},
+	"buttonSearchText": {
+		"description": "Text for the search button",
+		"message": "Cercar..."
+	},
+	"conjES": {
+		"message": "Conjugació espanyola"
+	},
+	"conjFR": {
+		"message": "Conjugació francesa"
+	},
+	"conjIT": {
+		"message": "Conjugació italiana"
+	},
+	"deen": {
+		"message": "Alemany-Anglés"
+	},
+	"defaultTranslation": {
+		"description": "Legend for the options page for the choice of the default translation.",
+		"message": "Traducció per defecte:"
+	},
+	"defen": {
+		"message": "Definició en anglés"
+	},
+	"defes": {
+		"message": "Definició en castellà"
+	},
+	"defit": {
+		"message": "Definició en italià"
+	},
+	"devBy": {
+		"description": "Extension developed by: ",
+		"message": "Extensió desenvolupada per:"
+	},
+	"divers": {
+		"message": "Divers"
+	},
+	"dropdown": {
+		"description": "Translation of 'drop down list'",
+		"message": "Llista desplegable"
+	},
+	"enar": {
+		"message": "Anglès-Àrab"
+	},
+	"ende": {
+		"message": "Anglès-Alemany"
+	},
+	"enes": {
+		"message": "Anglès-Espanyol"
+	},
+	"enfr": {
+		"message": "Anglès-Francès"
+	},
+	"enit": {
+		"message": "Anglès-Italià"
+	},
+	"enko": {
+		"message": "Anglès-Coreà"
+	},
+	"enpt": {
+		"message": "Anglès-Portuguès"
+	},
+	"enru": {
+		"message": "Anglès-Rus"
+	},
+	"enterAWordToSearch": {
+		"description": "Message shown when the user doesn't type a word to search",
+		"message": "Si us plau, escriviu una paraula a cercar."
+	},
+	"entr": {
+		"message": "Anglès-Turc"
+	},
+	"enzh": {
+		"message": "Anglès-Xinès"
+	},
+	"esen": {
+		"message": "Espanyol-Anglès"
+	},
+	"esfr": {
+		"message": "Espanyol-Francès"
+	},
+	"espt": {
+		"message": "Espanyol-Portuguès"
+	},
+	"fren": {
+		"message": "Francès-Anglès"
+	},
+	"fres": {
+		"message": "Francès-Espanyol"
+	},
+	"iten": {
+		"message": "Italià-Anglès"
+	},
+	"noResult": {
+		"description": "Displayed when no result is found",
+		"message": "No s'ha trobat resultat."
+	},
+	"optionsPage": {
+		"description": "Name of the option page",
+		"message": "Pàgina d'opcions:"
+	},
+	"pten": {
+		"message": "Portuguès-Anglès"
+	},
+	"ptes": {
+		"message": "Portuguès-Espanyol"
+	},
+	"radiobutton": {
+		"description": "Translation of 'radio buttons'",
+		"message": "Els botons d'opció"
+	},
+	"rechargerMenuContextuel": {
+		"message": "Actualitzar en el menú de context ..."
+	},
+	"ruen": {
+		"message": "Rus-Anglès"
+	},
+	"showTranslations": {
+		"description": "Legend for the options page for the choice of the translations to show.",
+		"message": "Mostrar..."
+	},
+	"translationsToShow": {
+		"description": "List of the translations to show.",
+		"message": "Traduccions per poder apreciar:"
+	},
+	"legendTranslations": {
+		"message": "Gestió de la traducció"
+	},
+	"autoshowlasttranslation": {
+		"message": "Seleccionar automàticament la última transacció utilitzada.<br>(En lloc de la que ve per defecte)"
+	},
+	"history": {
+		"message": "Història"
+	},
+	"displayLastDefault": {
+		"message": "A l'ouverture, afficher la dernière traduction utilisée."
+	},
+	"historyenabled": {
+		"message": "Història activada."
+	},
+	"deletehistory": {
+		"message": "Eliminar l'historial de cerca."
+	},
+	"historydeleted": {
+		"message": "Història borrada."
+	},
+	"openlinknewtab": {
+		"message": "Obrir enllaç en una pestanya"
+	},
+	"autosearchselect": {
+		"message": "Buscar automàticament el text seleccionat"
+	},
+	"esit": {
+		"message": "Espanyol-Italià"
+	},
+	"esde": {
+		"message": "Espanyol-Alemany"
+	},
+	"eses": {
+		"message": "Espanyol: definició"
+	},
+	"essin": {
+		"message": "Espanyol: sinònims"
+	},
+	"ites": {
+		"message": "Italià-Espanyol"
+	},
+	"itit": {
+		"message": "Italià definició"
+	},
+	"caca": {
+		"message": "Català: definició"
+	},
+	"dees": {
+		"message": "Alemany-Espanyol"
+	},
+	"ennl": {
+		"message": "Anglès-Holandès"
+	},
+	"nlen": {
+		"message": "Holandès-Anglès"
+	},
+	"ensv": {
+		"message": "Anglès-Suec"
+	},
+	"sven": {
+		"message": "Suec-Anglès"
+	},
+	"enpl": {
+		"message": "Anglès-Polonès"
+	},
+	"plen": {
+		"message": "Polonès-Anglès"
+	},
+	"enro": {
+		"message": "Anglès-Romanès"
+	},
+	"roen": {
+		"message": "Romanès-Anglès"
+	},
+	"encz": {
+		"message": "Anglès-Txec"
+	},
+	"czen": {
+		"message": "Txec-Anglès"
+	},
+	"engr": {
+		"message": "Anglès-Grec"
+	},
+	"gren": {
+		"message": "Grec-Anglès"
+	},
+	"tren": {
+		"message": "Turc-Anglès"
+	},
+	"zhen": {
+		"message": "Xinès-Anglès"
+	},
+	"enja": {
+		"message": "Anglès-Japonès"
+	},
+	"koen": {
+		"message": "Coreà-Anglès"
+	},
+	"aren": {
+		"message": "Àrab-Anglès"
+	},
+	"enthe": {
+		"message": "Anglès sinònims"
+	},
+	"enusg": {
+		"message": "L'ús d'Anglès "
+	},
+	"encol": {
+		"message": "Col·locacions en anglès "
+	}, 
+	"insitesearchlegend": {
+		"message": "Al lloc de cerca"
+	}, 
+	"insitesearchselect": {
+		"message": "Feu doble clic a una paraula mostrarà automàticament traduccions<br><i>(Sobre la base de traducció preferida o l'últim utilitzat)</i>"
+	}, 
+	"insitectrlkey": {
+		"message": "Tecla Ctrl (o la tecla Comando per a Mac) han de ser pressionades mentre que el doble clic per activar la cerca."
+	},
+	"helpinsitesearch": {
+		"message": "En navegar, fer doble clic a una paraula per mostrar una finestra emergent amb la seva traducció. La traducció utilitzada és el favorit d'un o el més recent que ha utilitzat, depenent de la seva configuració."
+	}
+}

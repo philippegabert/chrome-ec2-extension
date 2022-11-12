@@ -2,91 +2,153 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Amazon EC2 Management Configuration Page</title></head>
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<link rel="stylesheet" type="text/css" href="css/nice-select.css">
-<script src="scripts/lib/aws-sdk-2.7.13_custom.min.js"></script>
-<script src="scripts/lib/jquery-3.1.1.min.js"></script>
-<script src="scripts/lib/jquery.nice-select.min.js"></script>
-<script src="scripts/options.js"></script>
-<script src="scripts/lib/crypto-js/core-min.js"></script>
-<script src="scripts/lib/crypto-js/aes.js"></script>
+<script src="scripts/buy.js"></script>
+<script src="scripts/global.js"></script>
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="scripts/scripts.js"></script>
+<title>Options</title>
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
 <body>
-<div style="text-align:center;">
-	<img src="../images/aws.png" title="Amazon Web Services" height="50px" alt="Amazon Web Services">
-</div>
-<br/>
-<div id="options" style="width: 500px; margin: 0 auto;" >
-	<p>
-		Access Key ID :<br>
-		<input type="text" id="accessKeyId">
-	</p>
-	<p>
-		Secret Access Key:<br>
-	 	<input type="text" id="secretAccessKey">
-	</p>
-	
-	<div>
-		Default region:<br>
-		<select id="ec2_regions" class="wide">
-			<option data-display="Select">Select</option>
-			<option value="us-east-1">US East (N. Virginia)</option>
-			<option value="us-east-2">US East (Ohio)</option>
-			<option value="us-west-1">US West (N. California)</option>
-			<option value="us-west-2">US West (Oregon)</option>
-			<option value="eu-west-1">EU (Ireland)</option>
-			<option value="eu-west-2">EU (London)</option>
-			<option value="eu-central-1">EU (Frankfurt)</option>
-			<option value="ap-northeast-1">Asia Pacific (Tokyo)</option>
-			<option value="ap-northeast-2">Asia Pacific (Seoul)</option>
-			<option value="ap-southeast-1">Asia Pacific (Singapore)</option>
-			<option value="ap-southeast-2">Asia Pacific (Sydney)</option>
-			<option value="ap-south-1">Asia Pacific (Mumbai)</option>
-			<option value="sa-east-1">South America (São Paulo)</option>
-			<option value="ca-central-1">Canada (Central)</option>
-		</select>
-	</div><br/>
-	<div class="interval">
-			Interval (in minutes) to fetch running instances count:<br>
-			<input type="number" id="intervalFetchRunning" min="0" max="999" style="width:50px">
-			<span style="font-size: 10px; font-style: italic">0 means deactivated</span>
+	<div class="options_header">
+		<div style="display: inline-block" id="div_img_logo">
+			<img id="img_logo" src="images/WR_100.png" alt="WordReference" height="50" style="vertical-align: middle" />
+			
+		</div>
 	</div>
-	<div class="save_options">
-		<button id="chk_options">Test credentials</button>
-		<button id="save">Save options</button>
+	<div class="div_options div_options_translations">
+		<fieldset class="fieldset_options">
+			<legend id="legendTranslations">__MSG_legendTranslations__</legend>
+			<table class="lang_table">
+				<tr>
+					<td>
+						<div id="availableTranslations">__MSG_availableTranslations__</div> <select name="lstAllLanguages" id="lstAllLanguages" style="width: 170px;"
+						size="15"></select>
+					</td>
+					<td><input class="button_arrow" type="button" id="buttonToRight" name=">" value=">"> <input
+						class="button_arrow" type="button" id="buttonToLeft" name="<" value="<"></td>
+					<td>
+						<div id="translationsToShow">__MSG_translationsToShow__</div> <select name="lstLanguagesToShow" id="lstLanguagesToShow"
+						style="width: 170px;" size="15"></select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="text-align: center;">
+						<div id="defaultTranslation" style="margin-top: 5px;">__MSG_defaultTranslation__</div> <select name="chooseDefault" id="chooseDefault"
+						size="1" style="width: 170px;"></select> <br> <input type="checkbox" name="restoreLastLanguage"
+						id="restoreLastLanguage"> <label for="restoreLastLanguage" id="autoshowlasttranslation">__MSG_autoshowlasttranslation__</label>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
 	</div>
-	
-	<p style="font-size: 10px; font-style: italic">
-		<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html" target="_blank">How to get the access key id and secret access key ?</a>
-	</p>
-	<div class="options_info">
-		The access key id and secret access key will be encrypted before being saved.
+	<div class="div_options div_options_misc">
+		<fieldset class="fieldset_options" style="height:89px">
+			<legend id="legendPopup">__MSG_inSiteSearchLegend__</legend>
+			<div style="text-align: center; margin-top: 5px;">
+				<input type="checkbox" name="inSiteSearch" id="inSiteSearch"><label for="inSiteSearch" id="inSiteSearchSelect" title="__MSG_helpinSiteSearch__">__MSG_inSiteSearchSelect__</label><br><br>
+				<input type="checkbox" name="inSiteSearchCtrlKey" id="inSiteSearchCtrlKey"><label for="inSiteSearchCtrlKey" id="inSiteSearchCtrlKeySelect">__MSG_insitectrlkey__</label><br><br>
+			</div>
+		</fieldset>
+		<fieldset class="fieldset_options" style="height:50px">
+			<legend id="legendPopup">__MSG_showTranslations__</legend>
+			<div style="text-align: center; margin-top: 5px;">
+				<input type="radio" title="drop" id="affDefaultDrop" name="affDefault" value="drop" class="preview" /> <label for="affDefaultDrop"
+					id="dropdown" title="drop" class="preview">__MSG_dropdown__</label> <input type="radio" title="radio" id="affDefaultRadio"
+					name="affDefault" value="radio" class="preview" /> <label for="affDefaultRadio" id="radiobutton" title="radio" class="preview">__MSG_radiobutton__</label>
+			</div>
+		</fieldset>
+		<fieldset class="fieldset_options" style="height:60px">
+			<legend id="legendPopup">__MSG_history__</legend>
+			<div style="text-align: center; margin-top: 5px;">
+				<input type="checkbox" name="showHistoryOpt" id="showHistoryOpt"> <label for="showHistoryOpt" id="historyenabled">__MSG_historyenabled__</label> <a
+					id="effacerHisto" href="#" style="font-style:italic">__MSG_deletehistory__</a>
+			</div>
+			<div style="text-align: center; margin-top: 5px;">
+				<input type="checkbox" name="displayLastDefault" id="displayLastDefault"> <label for="displayLastDefault" id="displayLastDefaultLabel">__MSG_displayLastDefault__</label><br>
+			</div>
+		</fieldset>
+		<fieldset class="fieldset_options" style="height:120px">
+			<legend id="legendPopup">__MSG_divers__</legend>
+			<div style="text-align: center; margin-top: 5px;">
+				<input type="checkbox" name="openLinkInNewPage" id="openLinkInNewPage"><label for="openLinkInNewPage" id="openlinknewtab">__MSG_openlinknewtab__</label><br> <br>
+				<input type="checkbox" name="autoTriggerSearch" id="autoTriggerSearch"><label for="autoTriggerSearch" id="autosearchselect">__MSG_autosearchselect__</label><br><br>
+				<input type="checkbox" name="autoFillSelect" id="autoFillSelect"> <span id="affSelectedText">__MSG_affSelectedText__</span>
+			</div>
+		</fieldset>
+		
+		
 	</div>
-	<p>
-		<div id="status"></div>
-		<img src="../images/load.gif" id="loading_pic" style="display:none;width:32px"/>
-	</p>
-	
-</div>
+	<div class="div_options div_options_needyou">
+		<fieldset class="fieldset_options" id="fieldset_order_id" style="display: none; height:40px">
+			<legend>Order #</legend>
+			<div id="order_number"></div>
+		</fieldset>
+		<fieldset class="fieldset_options" style="height:89px">
+			<legend>Info</legend>
+			<div style="margin-top: 15px;margin-bottom: 15px;font-size: 12px;">
+				<a href="release.html"><img src="images/newspaper.png" style="vertical-align: middle; margin-right: 2px;" title="news" alt="news">What's new in this version ?</a><br>
+				<a href="howto.html"><img src="images/help.png" style="vertical-align: middle; margin-right: 2px;" title="Help" alt="Help">How-to use and configure the extension ?</a>
+			</div>
+		</fieldset>
+	</div>
 
-<br>
-<div class="donations" style="width: 500px; margin: 0 auto;">
-	You like this extension? Please consider making a donation :) <br>Thanks !
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-		<input type="hidden" name="cmd" value="_s-xclick">
-		<input type="hidden" name="hosted_button_id" value="CS3DGKEW8LQJ8">
-		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-		<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-	</form>
-</div>
-<br>
-<div class="credits" style="width: 500px; margin: 0 auto;">
-	<div>Icons made by <a href="http://www.flaticon.com/authors/minh-hoang" title="Minh Hoang">Minh Hoang</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-	<div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-	<div>Icons made by <a href="http://www.flaticon.com/authors/roundicons-freebies" title="Roundicons Freebies">Roundicons Freebies</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-	<div>Icons made by <a href="http://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-	<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-	<div>Custom select by <a href="http://hernansartorio.com/jquery-nice-select"  title="Hernán Sartorio">Hernán Sartorio</a> from <a href="http://hernansartorio.com/jquery-nice-select/" title="JQuery Nice Select">http://hernansartorio.com/jquery-nice-select/</a></div>
-</div>
+	<div style="display: block;">
+		<div class="div_options" style="cursor: pointer;" id="features_unlock">
+			<fieldset class="fieldset_options"  style="margin: 0 auto; border: solid 3px #ff9811; ">
+					<legend id="legendBuy">Unlock all features !</legend>
+					<div style="float: left;">
+						<div style="display: inline-block; width: 64px" >
+							<img src="images/premium.png" width="64" alt="unlock" id="unlock_img" style="vertical-align: bottom;"/>
+						</div>
+						<div style="display: inline-block; width: 200px;">
+							<ul>
+								<li>No search limitation</li>
+								<li>"In-site" search</li>
+								<li>Automatic search on text selection</li>
+								<li>Contextual menu (right click)</li>					
+							</ul>
+						</div>
+						<div style="font-size: 20px; margin-top: 10px; margin-bottom: 10px; text-align: center;">
+							Cost is <b style="color:#ff9811;">1.5€</b><br>
+							<span style="font-size: 14px; font-style: italic">(One-off - No subscription)</span>
+							<div id="idiidididi">rela</div>
+						</div>
+						<div id="paypal-button-container">
+						</div>				
+					</div>
+					
+				</fieldset>
+		</div>
+		
+		<div class="div_options">
+			<fieldset class="fieldset_options" style="height: 100px; width: 565px;margin-right: 10px">
+				<legend id="legendAbout">__MSG_about__</legend>
+				<div style="float: left;">
+					<div style="display: inline-block;">
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id"
+								value="XDF5V8SEGGFJS"> <input type="image"
+								src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif" name="submit"
+								alt="PayPal – The safer, easier way to pay online!"> <img alt=""
+								src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+						</form>
+					</div>
+					<div style="display: inline-block; margin-left: 20px">
+						<div id="devBy">__MSG_devBy__ Philippe GABERT</div>
+						<div id="authorTranslation">__MSG_authorTranslation__</div>
+						<br> Bug? Want to translate the extension? <br> --> E-mail: <a href="mailto:wordreference.extension@gmail.com">wordreference.extension@gmail.com</a>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		
+	</div>
+	
+	<script
+	    src="https://www.paypal.com/sdk/js?client-id=AfZW5nNmWJpyEcuUO5ASxzglyx-JVUUOoOkgSs-B9nj2sU1fRnuqCvL93pK1-TSbCYI10Y7qkes-LdrR&currency=EUR" data-csp-nonce="paypaljs">
+	
+	</script>
+	<script src="scripts/options.js"></script>
 </body>
 </html>

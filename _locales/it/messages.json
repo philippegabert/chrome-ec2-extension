@@ -1,27 +1,27 @@
 {
 	"about": {
 		"description": "About title in the option page",
-		"message": "About"
+		"message": "Riguardo lo sviluppatore"
 	},
 	"affDefault": {
 		"description": "Text to describe default display of languages",
-		"message": "Default display"
+		"message": "Scegli modalità visualizzazione"
 	},
 	"affSelectedText": {
 		"description": "Text to ask if the user wants to have the selected text automaticaly displayed in the search field",
-		"message": "Automatically fill the search field with selected word in a page.\u003Cbr/>\u003Ci>Only work with http, https and ftp pages.\u003C/i>"
+		"message": "Compila automanticamente il campo di ricerca con una parola selezionata da una pagina.\u003Cbr/>\u003Ci>Funziona solo con pagine http, https e ftp.\u003C/i>"
 	},
 	"authorTranslation": {
 		"description": "Name of the author of the translation",
-		"message": "English version: Philippe GABERT"
+		"message": "Versione italiana: Andrea CATTANE"
 	},
 	"availableTranslations": {
 		"description": "List of the available translations.",
-		"message": "Available translation:"
+		"message": "Traduzioni possibili:"
 	},
 	"buttonSearchText": {
 		"description": "Text for the search button",
-		"message": "Search..."
+		"message": "Ricerca..."
 	},
 	"conjES": {
 		"message": "Spanish conjugation"
@@ -33,127 +33,124 @@
 		"message": "Italian conjugation"
 	},
 	"deen": {
-		"message": "German-English"
+		"message": "Tedesco-Inglese"
 	},
 	"defaultTranslation": {
 		"description": "Legend for the options page for the choice of the default translation.",
-		"message": "Default translation:"
+		"message": "Traduzione predefinita:"
 	},
 	"defen": {
-		"message": "English definition"
+		"message": "Definizione inglese"
 	},
 	"defes": {
-		"message": "Spanish definition"
+		"message": "Definizione spagnola"
 	},
 	"defit": {
-		"message": "Italian definition"
+		"message": "Definizione italiana"
 	},
 	"devBy": {
 		"description": "Extension developed by: ",
-		"message": "Extension developed by: "
+		"message": "Estensione sviluppata da: "
 	},
 	"divers": {
-		"message": "Miscellaneous"
+		"message": "Varie"
 	},
 	"dropdown": {
 		"description": "Translation of 'drop down list'",
-		"message": "Drop-down list"
+		"message": "Lista a cascata"
 	},
 	"enar": {
-		"message": "English-Arabic"
+		"message": "Inglese-Arabo"
 	},
 	"ende": {
-		"message": "English-German"
+		"message": "Inglese-Tedesco"
 	},
 	"enes": {
-		"message": "English-Spanish"
+		"message": "Inglese-Spagnolo"
 	},
 	"enfr": {
-		"message": "English-French"
+		"message": "Inglese-Francese"
 	},
 	"enit": {
-		"message": "English-Italian"
+		"message": "Inglese-Italiano"
 	},
 	"enko": {
-		"message": "English-Korean"
+		"message": "Inglese-Coreano"
 	},
 	"enpt": {
-		"message": "English-Portuguese"
+		"message": "Inglese-Portoghese"
 	},
 	"enru": {
-		"message": "English-Russian"
+		"message": "Inglese-Russo"
 	},
 	"enterAWordToSearch": {
 		"description": "Message shown when the user doesn't type a word to search",
-		"message": "Please type a word to search."
+		"message": "Inserire una parola da cercare"
 	},
 	"entr": {
-		"message": "English-Turkish"
+		"message": "Inglese-Turco"
 	},
 	"enzh": {
-		"message": "English-Chinese"
+		"message": "Inglese-Cinese"
 	},
 	"esen": {
-		"message": "Spanish-English"
+		"message": "Spagnolo-Inglese"
 	},
 	"esfr": {
-		"message": "Spanish-French"
+		"message": "Spagnolo-Francese"
 	},
 	"espt": {
-		"message": "Spanish-Portuguese"
+		"message": "Spagnolo-Portuguese"
 	},
 	"fren": {
-		"message": "French-English"
+		"message": "Francese-Inglese"
 	},
 	"fres": {
-		"message": "French-Spanish"
+		"message": "Francese-Spagnolo"
 	},
 	"iten": {
-		"message": "Italian-English"
+		"message": "Italiano-Inglese"
 	},
 	"noResult": {
 		"description": "Displayed when no result is found",
-		"message": "No result found."
+		"message": "Nessuna corrispondeza trovata."
 	},
 	"optionsPage": {
 		"description": "Name of the option page",
-		"message": "Options page:"
+		"message": "Pagina delle opzioni"
 	},
 	"pten": {
-		"message": "Portuguese-English"
+		"message": "Portoghese-Inglese"
 	},
 	"ptes": {
-		"message": "Portuguese-Spanish"
+		"message": "Portoghese-Spagnolo"
 	},
 	"radiobutton": {
 		"description": "Translation of 'radio buttons'",
 		"message": "Radio buttons"
 	},
-	"rechargerMenuContextuel": {
-		"message": "Reload the contextual menu..."
-	},
 	"ruen": {
-		"message": "Russian-English"
+		"message": "Russo-Inglese"
 	},
 	"showTranslations": {
 		"description": "Legend for the options page for the choice of the translations to show.",
-		"message": "Show..."
+		"message": "Visualizza..."
 	},
 	"translationsToShow": {
 		"description": "List of the translations to show.",
-		"message": "Translations to show:"
+		"message": "Traduzioni selezionabili:"
 	},
 	"legendTranslations": {
 		"message": "Translation management"
 	},
 	"autoshowlasttranslation": {
-		"message": "Automatically select the last translation used. <br>(Instead of the default one)"
+		"message": "Automatically select the last transaction used. <br>(Instead of the default one)"
 	},
 	"history": {
 		"message": "History"
 	},
 	"displayLastDefault": {
-		"message": "On opening, display the results of the last translation used."
+		"message": "A l'ouverture, afficher la dernière traduction utilisée."
 	},
 	"historyenabled": {
 		"message": "History enabled."

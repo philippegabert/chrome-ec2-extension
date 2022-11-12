@@ -1,0 +1,269 @@
+{
+	"about": {
+		"description": "About title in the option page",
+		"message": "A propos..."
+	},
+	"affDefault": {
+		"description": "Text to describe default display of languages",
+		"message": "Affichage par défaut"
+	},
+	"affSelectedText": {
+		"description": "Text to ask if the user wants to have the selected text automaticaly displayed in the search field",
+		"message": "Remplir automatiquement le champ de recherche avec le mot sélectionné dans une page.\u003Cbr/>\u003Ci>Ne fonctionne qu'avec les pages http, https et ftp.\u003C/i>"
+	},
+	"authorTranslation": {
+		"description": "Name of the author of the translation",
+		"message": "Version française: Philippe GABERT"
+	},
+	"availableTranslations": {
+		"description": "List of the available translations.",
+		"message": "Traductions disponibles:"
+	},
+	"buttonSearchText": {
+		"description": "Text for the search button",
+		"message": "Chercher..."
+	},
+	"conjES": {
+		"message": "Conjugaison espagnole"
+	},
+	"conjFR": {
+		"message": "Conjugaison française"
+	},
+	"conjIT": {
+		"message": "Conjugaison italienne"
+	},
+	"deen": {
+		"message": "Allemand-Anglais"
+	},
+	"defaultTranslation": {
+		"description": "Legend for the options page for the choice of the default translation.",
+		"message": "Traduction par défaut:"
+	},
+	"defen": {
+		"message": "Définition en Anglais"
+	},
+	"defes": {
+		"message": "Définition en Espagnol"
+	},
+	"defit": {
+		"message": "Définition en Italien"
+	},
+	"devBy": {
+		"description": "Extension developed by: ",
+		"message": "Extension développée par: "
+	},
+	"divers": {
+		"message": "Divers"
+	},
+	"dropdown": {
+		"description": "Translation of 'drop down list'",
+		"message": "Liste déroulante"
+	},
+	"enar": {
+		"message": "Anglais-Arabe"
+	},
+	"ende": {
+		"message": "Anglais-Allemand"
+	},
+	"enes": {
+		"message": "Anglais-Espagnol"
+	},
+	"enfr": {
+		"message": "Anglais-Français"
+	},
+	"enit": {
+		"message": "Anglais-Italien"
+	},
+	"enko": {
+		"message": "Anglais-Coréen"
+	},
+	"enpt": {
+		"message": "Anglais-Portugais"
+	},
+	"enru": {
+		"message": "Anglais-Russe"
+	},
+	"enterAWordToSearch": {
+		"description": "Message shown when the user doesn't type a word to search",
+		"message": "Veuillez indiquer le mot à chercher."
+	},
+	"entr": {
+		"message": "Anglais-Turque"
+	},
+	"enzh": {
+		"message": "Anglais-Chinois"
+	},
+	"esen": {
+		"message": "Espagnol-Anglais"
+	},
+	"esfr": {
+		"message": "Espagnol-Français"
+	},
+	"espt": {
+		"message": "Espagnol-Portugais"
+	},
+	"fren": {
+		"message": "Français-Anglais"
+	},
+	"fres": {
+		"message": "Français-Espagnol"
+	},
+	"iten": {
+		"message": "Italien-Anglais"
+	},
+	"noResult": {
+		"description": "Displayed when no result is found",
+		"message": "Aucun résultat trouvé."
+	},
+	"optionsPage": {
+		"description": "Name of the option page",
+		"message": "Page d'options"
+	},
+	"pten": {
+		"message": "Portugais-Anglais"
+	},
+	"ptes": {
+		"message": "Portugais-Espagnol"
+	},
+	"radiobutton": {
+		"description": "Translation of 'radio buttons'",
+		"message": "Boutons radio"
+	},
+	"rechargerMenuContextuel": {
+		"message": "Recharger le menu contextuel..."
+	},
+	"ruen": {
+		"message": "Russe-Anglais"
+	},
+	"showTranslations": {
+		"description": "Legend for the options page for the choice of the translations to show.",
+		"message": "Affichage"
+	},
+	"translationsToShow": {
+		"description": "List of the translations to show.",
+		"message": "Traductions à afficher:"
+	},
+	"legendTranslations": {
+		"message": "Gestion des traductions"
+	},
+	"autoshowlasttranslation": {
+		"message": "Sélectionner automatiquement la dernière traduction utilisée <br>(Au lieu de celle par défaut)"
+	},
+	"history": {
+		"message": "Historique"
+	},
+	"displayLastDefault": {
+		"message": "A l'ouverture, afficher la dernière traduction utilisée."
+	},
+	"historyenabled": {
+		"message": "Historique activé."
+	},
+	"deletehistory": {
+		"message": "Supprimer l'historique"
+	},
+	"historydeleted": {
+		"message": "Historique supprimé."
+	},
+	"openlinknewtab": {
+		"message": "Ouvrir les liens dans un nouvel onglet"
+	},
+	"autosearchselect": {
+		"message": "Lancer automatiquement la recherche du texte sélectionné"
+	},
+	"esit": {
+		"message": "Espagnol-Italien"
+	},
+	"esde": {
+		"message": "Espagnol-Allemand"
+	},
+	"eses": {
+		"message": "Espagnol: Définitions"
+	},
+	"essin": {
+		"message": "Espagnol: Synonmyes"
+	},
+	"ites": {
+		"message": "Italien-Espagnol"
+	},
+	"itit": {
+		"message": "Italien: Définitions"
+	},
+	"caca": {
+		"message": "Catalan: Définitions"
+	},
+	"dees": {
+		"message": "Allemand-Espagnol"
+	},
+	"ennl": {
+		"message": "Anglais-Néerlandais"
+	},
+	"nlen": {
+		"message": "Néerlandais-Anglais"
+	},
+	"ensv": {
+		"message": "Anglais-Suédois"
+	},
+	"sven": {
+		"message": "Suédois-Anglais"
+	},
+	"enpl": {
+		"message": "Anglais-Polonais"
+	},
+	"plen": {
+		"message": "Polonais-Anglais"
+	},
+	"enro": {
+		"message": "Anglais-Roumain"
+	},
+	"roen": {
+		"message": "Roumain-Anglais"
+	},
+	"encz": {
+		"message": "Anglais-Tchèque"
+	},
+	"czen": {
+		"message": "Tchèque-Anglais"
+	},
+	"engr": {
+		"message": "Anglais-Grec"
+	},
+	"gren": {
+		"message": "Grec-Anglais"
+	},
+	"tren": {
+		"message": "Turque-Anglais"
+	},
+	"zhen": {
+		"message": "Chinois-Anglais"
+	},
+	"enja": {
+		"message": "Anglais-Japonais"
+	},
+	"koen": {
+		"message": "Coréen-Anglais"
+	},
+	"aren": {
+		"message": "Arabe-Anglais"
+	},
+	"enthe": {
+		"message": "Anglais: Synonymes"
+	},
+	"enusg": {
+		"message": "Anglais usage "
+	},
+	"encol": {
+		"message": "Anglais collocations "
+	}, 
+	"insitesearchlegend": {
+		"message": "Recherche \"in-site\""
+	}, 
+	"insitesearchselect": {
+		"message": "Un double clic sur un mot affiche automatiquement les traductions.<br><i>(Basé sur la traduction préférée ou la dernière utilisée)</i>"
+	}, 
+	"insitectrlkey": {
+		"message": "La touche Ctrl (ou Command pour Mac) doit être appuyée lors du double clic"
+	}, 
+	"helpinsitesearch": {
+		"message": "En naviguant, double cliquez sur un mot pour afficher la traduction dans un popup. La traduction utilisée est la traduction préférée ou la dernière utilisée, en fonction de votre configuration."
+	}
+}

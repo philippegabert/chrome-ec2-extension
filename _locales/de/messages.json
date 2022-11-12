@@ -1,27 +1,27 @@
 {
 	"about": {
 		"description": "About title in the option page",
-		"message": "About"
+		"message": "Info"
 	},
 	"affDefault": {
 		"description": "Text to describe default display of languages",
-		"message": "Default display"
+		"message": "Vorgegebene Anzeige"
 	},
 	"affSelectedText": {
 		"description": "Text to ask if the user wants to have the selected text automaticaly displayed in the search field",
-		"message": "Automatically fill the search field with selected word in a page.\u003Cbr/>\u003Ci>Only work with http, https and ftp pages.\u003C/i>"
+		"message": "Automatisch das Suchfeld mit dem ausgesuchten Wort in eine Seite ausfüllen.\u003Cbr/>\u003Ci> Nur mit http, https, und ftp Seiten arbeiten.\u003C/i>"
 	},
 	"authorTranslation": {
 		"description": "Name of the author of the translation",
-		"message": "English version: Philippe GABERT"
+		"message": "Deutsche Übersetzung: James Morgan"
 	},
 	"availableTranslations": {
 		"description": "List of the available translations.",
-		"message": "Available translation:"
+		"message": "Verfügbare Übersetzungen:"
 	},
 	"buttonSearchText": {
 		"description": "Text for the search button",
-		"message": "Search..."
+		"message": "Suchen..."
 	},
 	"conjES": {
 		"message": "Spanish conjugation"
@@ -33,127 +33,136 @@
 		"message": "Italian conjugation"
 	},
 	"deen": {
-		"message": "German-English"
+		"message": "Deutsch-Englisch"
 	},
 	"defaultTranslation": {
 		"description": "Legend for the options page for the choice of the default translation.",
-		"message": "Default translation:"
+		"message": "Vorgegebene Übersetzung:"
 	},
 	"defen": {
-		"message": "English definition"
+		"message": "Englisch Definition"
 	},
 	"defes": {
-		"message": "Spanish definition"
+		"message": "Spanisch Definition"
 	},
 	"defit": {
-		"message": "Italian definition"
+		"message": "Italienisch Definition"
 	},
 	"devBy": {
 		"description": "Extension developed by: ",
-		"message": "Extension developed by: "
+		"message": "Erweiterung entwickelt von: "
 	},
 	"divers": {
-		"message": "Miscellaneous"
+		"message": "Sonstiges"
 	},
 	"dropdown": {
 		"description": "Translation of 'drop down list'",
-		"message": "Drop-down list"
+		"message": "Dropdown liste"
 	},
 	"enar": {
-		"message": "English-Arabic"
+		"message": "Englisch-Arabisch"
+	},
+	"encz": {
+		"message": "Englisch-Tschechisch"
 	},
 	"ende": {
-		"message": "English-German"
+		"message": "Englisch-Deutsch"
 	},
 	"enes": {
-		"message": "English-Spanish"
+		"message": "Enslich-Spanisch"
 	},
 	"enfr": {
-		"message": "English-French"
+		"message": "Englisch-Französisch"
+	},
+	"engr": {
+		"message": "Englisch-Griechisch"
 	},
 	"enit": {
-		"message": "English-Italian"
+		"message": "Englisch-Italienisch"
 	},
 	"enko": {
-		"message": "English-Korean"
+		"message": "Englisch-Koreanisch"
+	},
+	"enpl": {
+		"message": "Englisch-Polnisch"
 	},
 	"enpt": {
-		"message": "English-Portuguese"
+		"message": "Englisch-Portugiesisch"
+	},
+	"enro": {
+		"message": "Englisch-Rumänisch"
 	},
 	"enru": {
-		"message": "English-Russian"
+		"message": "Englisch-Russisch"
 	},
 	"enterAWordToSearch": {
 		"description": "Message shown when the user doesn't type a word to search",
-		"message": "Please type a word to search."
+		"message": "Bitte geben Sie ein Wort ein."
 	},
 	"entr": {
-		"message": "English-Turkish"
+		"message": "Englisch-Türkisch"
 	},
 	"enzh": {
-		"message": "English-Chinese"
+		"message": "Englisch-Chinesisch"
 	},
 	"esen": {
-		"message": "Spanish-English"
+		"message": "Spanisch-Englisch"
 	},
 	"esfr": {
-		"message": "Spanish-French"
+		"message": "Spanisch-Französisch"
 	},
 	"espt": {
-		"message": "Spanish-Portuguese"
+		"message": "Spanisch-Portugiesisch"
 	},
 	"fren": {
-		"message": "French-English"
+		"message": "Französisch-Englisch"
 	},
 	"fres": {
-		"message": "French-Spanish"
+		"message": "Französisch-Spanisch"
 	},
 	"iten": {
-		"message": "Italian-English"
+		"message": "Italienisch-Englisch"
 	},
 	"noResult": {
 		"description": "Displayed when no result is found",
-		"message": "No result found."
+		"message": "Kein Ergebnis gefunden."
 	},
 	"optionsPage": {
 		"description": "Name of the option page",
-		"message": "Options page:"
+		"message": "Optionen"
 	},
 	"pten": {
-		"message": "Portuguese-English"
+		"message": "Portugiesisch-Englisch"
 	},
 	"ptes": {
-		"message": "Portuguese-Spanish"
+		"message": "Portugiesisch-Spanisch"
 	},
 	"radiobutton": {
 		"description": "Translation of 'radio buttons'",
-		"message": "Radio buttons"
-	},
-	"rechargerMenuContextuel": {
-		"message": "Reload the contextual menu..."
+		"message": "Radiobuttons"
 	},
 	"ruen": {
-		"message": "Russian-English"
+		"message": "Russisch-Englisch"
 	},
 	"showTranslations": {
 		"description": "Legend for the options page for the choice of the translations to show.",
-		"message": "Show..."
+		"message": "Zeigen..."
 	},
 	"translationsToShow": {
 		"description": "List of the translations to show.",
-		"message": "Translations to show:"
+		"message": "Übersetzungen zu zeigen:"
 	},
 	"legendTranslations": {
 		"message": "Translation management"
 	},
 	"autoshowlasttranslation": {
-		"message": "Automatically select the last translation used. <br>(Instead of the default one)"
+		"message": "Automatically select the last transaction used. <br>(Instead of the default one)"
 	},
 	"history": {
 		"message": "History"
 	},
 	"displayLastDefault": {
-		"message": "On opening, display the results of the last translation used."
+		"message": "A l'ouverture, afficher la dernière traduction utilisée."
 	},
 	"historyenabled": {
 		"message": "History enabled."
@@ -206,26 +215,14 @@
 	"sven": {
 		"message": "Swedish-English"
 	},
-	"enpl": {
-		"message": "English-Polish"
-	},
 	"plen": {
 		"message": "Polish-English"
-	},
-	"enro": {
-		"message": "English-Romanian"
 	},
 	"roen": {
 		"message": "Romanian-English"
 	},
-	"encz": {
-		"message": "English-Czech"
-	},
 	"czen": {
 		"message": "Czech-English"
-	},
-	"engr": {
-		"message": "English-Greek"
 	},
 	"gren": {
 		"message": "Greek-English"
@@ -262,7 +259,7 @@
 	}, 
 	"insitectrlkey": {
 		"message": "Ctrl Key (or Command Key for Mac) must be pressed while double click to trigger search."
-	},
+	}, 
 	"helpinsitesearch": {
 		"message": "When browsing, double click on a word to show a popup with its translation. The translation used is the favorite one or the latest one you've used, depending on your configuration."
 	}

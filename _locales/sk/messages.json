@@ -1,27 +1,27 @@
 {
 	"about": {
 		"description": "About title in the option page",
-		"message": "About"
+		"message": "Bližšie info"
 	},
 	"affDefault": {
 		"description": "Text to describe default display of languages",
-		"message": "Default display"
+		"message": "Zvolené zobrazovanie"
 	},
 	"affSelectedText": {
 		"description": "Text to ask if the user wants to have the selected text automaticaly displayed in the search field",
-		"message": "Automatically fill the search field with selected word in a page.\u003Cbr/>\u003Ci>Only work with http, https and ftp pages.\u003C/i>"
+		"message": "Automaticky nastaví vybrané slovo na stránke do slovníka.\u003Cbr/>\u003Ci>Funuje iba na http, https, ftp suboroch/stránkachw/i>"
 	},
 	"authorTranslation": {
 		"description": "Name of the author of the translation",
-		"message": "English version: Philippe GABERT"
+		"message": "Slovenská verzia: Matúš Hricovíny"
 	},
 	"availableTranslations": {
 		"description": "List of the available translations.",
-		"message": "Available translation:"
+		"message": "Dostupné slovníky:"
 	},
 	"buttonSearchText": {
 		"description": "Text for the search button",
-		"message": "Search..."
+		"message": "Prelož..."
 	},
 	"conjES": {
 		"message": "Spanish conjugation"
@@ -33,127 +33,116 @@
 		"message": "Italian conjugation"
 	},
 	"deen": {
-		"message": "German-English"
+		"message": "Nemecko-Anglický"
 	},
 	"defaultTranslation": {
 		"description": "Legend for the options page for the choice of the default translation.",
-		"message": "Default translation:"
+		"message": "Zvolený slovník:"
 	},
 	"defen": {
-		"message": "English definition"
+		"message": "Anglictina definície"
 	},
 	"defes": {
-		"message": "Spanish definition"
+		"message": "Definícia Španielcine"
 	},
 	"defit": {
-		"message": "Italian definition"
+		"message": "Talianska definície"
 	},
 	"devBy": {
 		"description": "Extension developed by: ",
-		"message": "Extension developed by: "
+		"message": "Rozšírenie vyvinul: "
 	},
 	"divers": {
-		"message": "Miscellaneous"
-	},
-	"dropdown": {
-		"description": "Translation of 'drop down list'",
-		"message": "Drop-down list"
+		"message": "Rozmanitý"
 	},
 	"enar": {
-		"message": "English-Arabic"
+		"message": "Anglicko-Arabský"
 	},
 	"ende": {
-		"message": "English-German"
+		"message": "Anglicko-Nemecký"
 	},
 	"enes": {
-		"message": "English-Spanish"
+		"message": "Anglicko-Španielsky"
 	},
 	"enfr": {
-		"message": "English-French"
+		"message": "Anglicko-Francúzsky"
 	},
 	"enit": {
-		"message": "English-Italian"
+		"message": "Anglicko-Taliansky"
 	},
 	"enko": {
-		"message": "English-Korean"
+		"message": "Anglicko-Kórejský"
 	},
 	"enpt": {
-		"message": "English-Portuguese"
+		"message": "Anglicko-Portugalský"
 	},
 	"enru": {
-		"message": "English-Russian"
+		"message": "Anglicko-Ruský"
 	},
 	"enterAWordToSearch": {
 		"description": "Message shown when the user doesn't type a word to search",
-		"message": "Please type a word to search."
+		"message": "Napíš slovo na preklad."
 	},
 	"entr": {
-		"message": "English-Turkish"
+		"message": "Anglicko-Turecký"
 	},
 	"enzh": {
-		"message": "English-Chinese"
+		"message": "Anglicko-Čínsky"
 	},
 	"esen": {
-		"message": "Spanish-English"
+		"message": "Španielsko-Anglický"
 	},
 	"esfr": {
-		"message": "Spanish-French"
+		"message": "Španielsko-Francúzsky"
 	},
 	"espt": {
-		"message": "Spanish-Portuguese"
+		"message": "Španielsko-Portugalský"
 	},
 	"fren": {
-		"message": "French-English"
+		"message": "Francúzsko-Anglický"
 	},
 	"fres": {
-		"message": "French-Spanish"
+		"message": "Francúzsko-Španielsky"
 	},
 	"iten": {
-		"message": "Italian-English"
+		"message": "Taliansko-Anglický"
 	},
 	"noResult": {
 		"description": "Displayed when no result is found",
-		"message": "No result found."
+		"message": "Nenájdený výraz."
 	},
 	"optionsPage": {
 		"description": "Name of the option page",
-		"message": "Options page:"
+		"message": "Nastavenia"
 	},
 	"pten": {
-		"message": "Portuguese-English"
+		"message": "Portugalský-Anglicko"
 	},
 	"ptes": {
-		"message": "Portuguese-Spanish"
-	},
-	"radiobutton": {
-		"description": "Translation of 'radio buttons'",
-		"message": "Radio buttons"
-	},
-	"rechargerMenuContextuel": {
-		"message": "Reload the contextual menu..."
+		"message": "Portugalsko-Španielsky"
 	},
 	"ruen": {
-		"message": "Russian-English"
+		"message": "Rusko-Anglický"
 	},
 	"showTranslations": {
 		"description": "Legend for the options page for the choice of the translations to show.",
-		"message": "Show..."
+		"message": "Zobraz..."
 	},
 	"translationsToShow": {
 		"description": "List of the translations to show.",
-		"message": "Translations to show:"
+		"message": "Zobrazený/é slovník/y:"
 	},
 	"legendTranslations": {
 		"message": "Translation management"
 	},
 	"autoshowlasttranslation": {
-		"message": "Automatically select the last translation used. <br>(Instead of the default one)"
+		"message": "Automatically select the last transaction used. <br>(Instead of the default one)"
 	},
 	"history": {
 		"message": "History"
 	},
 	"displayLastDefault": {
-		"message": "On opening, display the results of the last translation used."
+		"message": "A l'ouverture, afficher la dernière traduction utilisée."
 	},
 	"historyenabled": {
 		"message": "History enabled."
@@ -262,7 +251,7 @@
 	}, 
 	"insitectrlkey": {
 		"message": "Ctrl Key (or Command Key for Mac) must be pressed while double click to trigger search."
-	},
+	}, 
 	"helpinsitesearch": {
 		"message": "When browsing, double click on a word to show a popup with its translation. The translation used is the favorite one or the latest one you've used, depending on your configuration."
 	}

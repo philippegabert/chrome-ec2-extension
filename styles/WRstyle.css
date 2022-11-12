@@ -1,0 +1,812 @@
+/*
+* old css
+* necessary for oxford content
+*
+* put above redesign css so thay anything in redesign can overwrite these rules
+*
+*/
+td.nums1	{font-weight:bold;color:#5E58C7; vertical-align:top;text-align:right}
+td.roman1	{font-weight:bold;color:#5E58C7; vertical-align:top;font-size:16px;}
+span.roman1	{font-weight:bold;color:#5E58C7; vertical-align:bottom;}
+span.b	{font-weight:bold;}
+span.i, .bl	{color:#003399;}
+span.r	{color:red;}
+span.ic	{font-style:italic;color:#003399;}
+span.supr1	{vertical-align:super;color:#003399;}
+span.ac	{font-variant:small-caps;color:red;font-weight:bold;}
+div.trans	{padding:0px}
+ol.entry li	{margin-top:5px;}
+
+.hide 	{display:none}
+.abb, .cfrf, .con, .contr, .cvf, .divar, .ell, .ex, .exp, .exs, .fem, .fm, .frm, .hcvf, .dex,
+.hcw, .idx, .inf, .mex, .mod, .nh, .prv, .pvb, .pvbv, .sig, .var, .x, .xi, .xrru,
+.cw, .phw, .stxt, .cmp, .dex, .femv, .frmv, .vcp, .prvx, .idm, .cv, .cx, /* xg added from compare (where?), xr removed for deC; itenP xr, not xg */
+.ef, .fs, .lc, .le, .li, .lo, .lp, .ls, .lu, .lv, .sb, .sl, .sp, .v, .vs, .G, .G2, .VF, .CG, .lemma, .forma, .fordiv, .cv, .nv,
+.f, .h2, .rb, .rbi, .pg, .bp, .pvv  /* pv removed for it, since pv not allowed, pg added for de */
+		{font-weight:bold; color:black}
+.adj, .advex, .fld, .gl, .i, .ind, .lev, .mx, .nb, .vbs, 
+.nex, .qdef, .qenc, .qnb, .qsyn, .syn, .u, .vbx, .vix, .ctx, .collo, .ix, .xg,
+.ico, .cs, .fi, .a, .ei, .ri, .co, .cs, .C, .CO, .CB, UC
+		{font-style:italic}
+
+.hw,.vpr, .nw, .ihw, .bhw  /* bhw restrored for DeEn ; .ihw moved for es "K"; , .ct removed for German Rechen- */
+		{font-weight:bold; text-decoration:underline}
+.GG 	{font-weight:bold; font-style:italic}
+div.id, div.cpd 
+		{padding-left:0px; font-weight:bold}
+.reg, .fam, .coll, .la, .ide /* .ide removed  for Concise, but then puut back*/
+		{font-style:italic; font-weight: normal}
+.ps, .qps, .psv, .psyn, .ind, .pos, .gr, .infg, .u, .ei, .P, .mfsp, .indv, .old
+		{color:#003399; font-style:italic}
+
+.ul 		{text-decoration: underline}
+.stln	{border-bottom: 1px solid black}
+.sc, .xs, .hl, .fx, .M, .fhl, .etichetta, .attrverpron
+		{font-variant: small-caps; text-transform:lowercase}
+.xr		{font-variant: small-caps; font-style:normal;} /* xr is diff itP, deC */
+.hm, .su, .hom, .APICE, .sup, .tab
+		{vertical-align: super; font-size:10px}
+.sub	{vertical-align: sub; font-size:8px}
+.psec, .ol, .vsec, .lemma, .catgram, .artsem, .o, .divgr, .cb, .hg .ps, .fordiv, .base, .hbase
+		{display: block;}
+.fp, .para
+		{display: block;padding-top:10pt}
+.un, .divgr, .approfondimento, .cgl, .fun, .boxc
+	 	{display: block; border: 1px solid black; padding:5px; background: white}
+.scw, .scvf, .hbhw, .ix, .cn, .bhwes, .base /*  show the cbhg header for DE? Yes, bbut hide hbhw; .base added for compounds*/
+		{display: none}
+.infg br, .pp br, .infmorf br, .la br, .ei br
+		{display:none}
+ol 		{padding-left: 20px;margin:2px;margin-left:5px}
+.ph, .fonetica		{ font-family:"Lucida Sans Unicode", "Arial Unicode MS","Lucida Grande"; color: #003399; font-size: 10px; }
+.qreg	{font-family: arial narrow; }
+.xsdr	{font-family: times}
+#temp,
+.sg, .pg, .cpd, .ct, .ne, .eg, .bt
+		{display: block}
+/* for IT*/
+.se1, .pvp {display: block; padding-left:20px} 
+
+.clickable {cursor:pointer;}
+.small1 {font-size: x-small}
+
+/* yui autocomplete */
+#myAutoComplete
+{
+	width: 150px; /* set width here or else widget will expand to fit its container */
+	padding: 2px 2px 2px 2px;
+	display: inline;
+	text-align: left;
+}
+#myACContainer
+{
+	display: none;
+}
+
+.yui-skin-sam .yui-ac
+{
+	position: relative;
+	font-family: arial;
+	font-size: 100%;
+}
+.yui-skin-sam .yui-ac-input
+{
+	position: relative;
+	width: 150px;
+}
+.yui-skin-sam .yui-ac-container
+{
+	position: absolute;
+	top: 27px;
+	left: -3px;
+	width: 100%;
+	text-align: left;
+}
+.yui-skin-sam .yui-ac-content
+{
+	position: absolute;
+	width: 90%;
+	border: 1px solid #808080;
+	background: #fff;
+	overflow: hidden;
+	z-index: 9050;
+	max-height:300px;overflow:auto;overflow-x:hidden; /* set scrolling */ 
+	_height:300px; /* ie6 */ 
+	padding-left:0px;
+	padding-right:0px;
+}
+.yui-skin-sam .yui-ac-bd
+{
+	padding-left:0px;
+	padding-right:0px;
+}
+.yui-skin-sam .yui-ac-shadow
+{
+	position: absolute;
+	margin: .3em;
+	width: 100%;
+	background: #000;
+	-moz-opacity: 0.10;
+	opacity: .10;
+	filter: alpha(opacity=10);
+	z-index: 904900;
+}
+.yui-skin-sam .yui-ac iframe
+{
+	opacity: 0;
+	filter: alpha(opacity=0);
+	padding-right: .3em;
+	padding-bottom: .3em;
+}
+.yui-skin-sam .yui-ac-content ul
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.yui-skin-sam .yui-ac-content li
+{
+	margin: 0;
+	padding: 2px 5px;
+	cursor: default;
+	white-space: nowrap;
+	list-style: none;
+	zoom: 1;
+}
+.yui-skin-sam .yui-ac-content li.yui-ac-prehighlight
+{
+	background: #B3D4FF;
+}
+.yui-skin-sam .yui-ac-content li.yui-ac-highlight
+{
+	background: #918CE3;
+	color: #FFF;
+}
+
+
+
+/*
+*
+* Redesign CSS
+*
+*/
+
+html { font-size: 100%; overflow: auto; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 12px; line-height: 1.231; font-family: Arial, "Helvetica Neue", sans-serif; background: white;}
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+audio:not([controls]) { display: none; }
+
+a {
+text-decoration: none;
+color: #0645ad;
+/* font-size: 11px; */
+}
+
+a:hover {text-decoration: underline;}
+
+#container {
+ width: 1002px;
+ margin: 0 auto;
+ overflow: hidden;
+ box-shadow: 0px 0 5px 1px #5E58C7;
+ margin-bottom: 3px;
+ border-radius: 3px 3px 3px 3px;
+}
+
+/*header {*/
+#header {
+ background: #5e58c7;
+ position: static;
+ margin-left: auto;
+ margin-right: auto;
+ height: 41px;
+ line-height: 38px;
+ border-bottom-left-radius: 3px;
+ border-bottom-right-radius: 3px;
+ -webkit-border-bottom-left-radius: 3px;
+ -webkit-border-bottom-right-radius: 3px;
+ -moz-border-radius-bottomleft: 3px;
+ -moz-border-radius-bottomright: 3px;
+}
+
+#logo {
+ color: #F8F7FF;
+ float: left;
+ font-family: Arial, Helvetica-Bold;
+ font-size: 16px;
+ padding-left: 16px;
+ white-space:nowrap;
+}
+/* added for a tag in header */
+#logo a{
+ color:#f8f7ff;
+ font-family:Arial, Helvetica-Bold;
+ font-size:22px;
+}
+
+/*nav {*/
+#nav {
+ color: #F7F6FF;
+ float: right;
+ font-family: Arial, "Helvetica Neue";
+ font-size: 13px;
+ padding-right: 13px;
+ padding-top: 2px;
+}
+
+#nav a {
+ font-weight: bold;
+ color: #f7f6ff;
+ font-size: 13px;
+ font-family: Arial, "Helvetica Neue";
+ display: inline;
+}
+
+#logo h1 {
+ color: #e5e3ff;
+ font-family: Arial, Helvetica;
+ font-size: 12px;
+ display: inline;
+}
+
+#ad1 {
+ position: static;
+ width: 728px;
+ height:90px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+
+#search {
+ height: 50px;
+ background: #ebebf2;
+ position: static;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius: 3px;
+ border: 1px #DCDCDC solid;
+}
+
+#search input {
+  color: #b3b3b3;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  height: 30px;
+  width: 295px;
+  font-size: 16px;
+  padding-right:2px;
+  /*width: 320px;*/
+}
+
+/* put text back in black when typing */
+#search input:active, #search input:focus{
+	color:black;
+}
+
+/**search**/
+#text_form {
+float:left;
+margin-left: 184px;
+margin-top: 6px;
+}
+
+
+#text_form input.button{
+	background: url(/images/magnifying_glass.png) no-repeat;
+	border: solid 1px #B7B7B7;
+	width: 25px;
+	height: 32px;
+	background-color: #D7D7D7;
+	cursor: pointer;
+	background-position: 5px;
+	line-height: 29px;
+}
+
+.content {
+margin-top:-5px;
+height: auto;
+background: #f6f6f9;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border: 1px #DCDCDC solid;
+overflow-x: hidden;
+clear:both;
+}
+
+#contenttable{
+	border-collapse:collapse;
+}
+
+/*footer {*/
+#footer {
+font-size: 11px;
+position: relative;
+padding-top: 7px;
+padding-bottom: 5px;
+}
+
+.footer{
+	width:1000px;	
+}
+
+/* changed from #title1 to .title1, cant use id more than 1 time, this was used 3 times*/
+td .title1 {
+  font-size: 13px;
+  font-weight:bold;
+  border-bottom: 1px solid #DCDCDC;
+  margin-bottom: 7px;
+  padding-top: 25px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  color: #777777;
+}
+
+/* only modify lis in the left column */
+#leftcolumn li {
+  list-style-type: none;
+}
+/*reset for thesaurus LIs */
+li.synonym{
+	margin-left:auto;
+}
+
+#left{
+ padding-left:0;
+ margin-top:0;
+ font-size: 11px;
+}
+#left ul li{
+padding-right:1px;
+}
+#left ul{
+    padding-left:15px;
+    padding-right:1px;
+}
+
+/* for wr save history */
+#rstitle{
+	margin-top:15px;
+}
+#rsinfo{
+	padding-left:25px;
+}
+
+/*leave wrsave hidden unless ls supported*/
+#rstitle,#rsinfo{display:none;}
+#wrsave{list-style-type:none;}
+
+
+/* WR random word */
+td #more {padding-left: 17px;}
+#more p{margin-bottom:0px;}
+.randomword{padding-left:15px;}
+
+table #right {
+  padding-left: 18px;
+  margin-top: 0px;
+}
+
+
+/* changed from #ad to .ad, cant use id 4 times */
+td .ad {
+margin-bottom: 50px;
+}
+
+
+/* Listening widget */
+#listen_widget {
+  color: #707070;
+  background-color: #F9F9F9;
+  font-size:12px;
+  display:inline-block;
+  white-space:nowrap;
+  
+  padding: 4px 5px 2px;
+  border: 1px solid #C5C5C5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-left:0;  
+  
+}
+
+#listen_txt{cursor:pointer;}
+#listen_txt, .listen_language {
+  padding: 5px 7px 4px 5px;
+  position: relative;
+  
+  top: -2px;
+  left: 4px;
+  text-transform: uppercase;
+  
+  border-left: 1px solid #C5C5C5;
+}
+
+a .listen_language {
+  color: #707070;
+}
+
+#listen_widget a:hover {
+  text-decoration: none;
+  font-weight: bold !important;
+  /*to fix onmouseout/onmouseover overwriting this rule*/
+}
+
+
+/*article, #postArticle {*/
+#article, #postArticle {
+padding: 0 20px;
+}
+
+#article a, #articleWRD a {
+font-size: 11px;
+}
+
+#article p, #articleWRD p {
+font-size: 10px;
+/* font-family:Verdana, Arial, sans-serif; */
+margin-bottom:3px;
+}
+
+/* write over this font-size for no word pages*/
+div#article .noword p {
+	font-size:14px;
+}
+
+/* write over also for no translation*/
+div#article p#noEntryFound{
+	font-size:12px;
+}
+
+div#article p#gSuggestionHead{
+	margin-bottom:0px;
+	font-size:12px;
+}
+div#article p.tobetranslated{
+	font-size:12px;
+}
+
+
+/* For div with spelling suggstions --- take inline style out of spelljs.php so you can remove !important */
+div#spellSug{margin-left:2px !important;}
+
+#article table.WRD {
+  cursor:pointer;
+}
+#spellSug table{
+	border-style:hidden;
+	border-collapse:collapse;
+}
+#spellSug td{
+	border-width:0px;
+}
+
+#lista_link {
+font-size: 13px;
+margin-bottom:5px;
+padding-left: 60px;
+border-top:1px solid #DCDCDC;
+/* padding-bottom: 50px !important; */
+}
+#lista_link ul li{
+	list-style-type:none;
+}
+#lista_link ul{
+	padding-left:0;
+	margin-bottom:5px;
+}
+
+#lista_link a {
+  font-size: 13px;
+}
+
+/* Extra links */
+#extra_links {
+  margin-bottom: 15px;
+  margin-left: 43px;  
+}
+
+#extra_links a {
+    display: list-item;
+    padding: 2px 0;
+}
+
+#extra_links .boxed.last {
+  border: none !important;
+}
+/* get rid of double bottom border on last forum link */
+#extra_links a:last-child .boxed{
+	border-bottom:0 none;
+}
+
+
+/* Other languages links */
+p.other_languages {
+  line-height: 1.5em;
+  font-size:12px !important;
+}
+
+*[placeholder] {
+  padding-left: 5px !important;  
+}
+
+/* Custom dropdown */
+
+label.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select {
+  position: relative;
+  /* commented out because these cuase select to be hidden
+  top: -28px;
+  left: 555px;
+  */
+}
+
+.custom-select select {
+  position: relative;
+  border: 1px solid #B7B7B7;
+  padding: 7px 8px 6px 10px;
+  margin: 0;
+  font: inherit;
+  font-size: 13px;
+/*  color: white;*/
+  font-weight: bold;
+  /*text-shadow: #9C9C9C 0px 1px 0px;*/
+  width: 164px;
+  
+  outline:none; /* remove focus ring from Webkit */
+  line-height: 1.2;
+  background: #d7d7d7;
+/*  background: -moz-linear-gradient(top, #d7d7d7 0%, #bebebe 100%);
+  background: -webkit-linear-gradient(top, #d7d7d7 0%, #bebebe 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d7d7d7), color-stop(100%,#bebebe));
+  background: -webkit-linear-gradient(top, #d7d7d7 0%,#bebebe 100%);
+  background: -o-linear-gradient(top, #d7d7d7 0%,#bebebe 100%);
+  background: -ms-linear-gradient(top, #d7d7d7 0%,#bebebe 100%);
+  background: linear-gradient(top, #d7d7d7 0%,#bebebe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7d7d7', endColorstr='#bebebe',GradientType=0 );
+*/
+
+/*  -webkit-appearance:none; */ /* remove the strong OSX influence from Webkit */
+  -moz-appearance: none;
+  appearance: none;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* Since we removed the default focus styles, we have to add our own */
+.custom-select select:focus {
+  -webkit-box-shadow: 0 0 3px 1px #ccc;
+  -moz-box-shadow: 0 0 3px 1px #ccc;
+  box-shadow: 0 0 3px 1px #ccc;
+}
+
+/* Select arrow styling */
+.custom-select:after {
+/*  content: "?";*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 70%;
+  line-height: 35px;
+  padding: 0 8px;
+  color: white;
+  
+  pointer-events:none;
+  
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.no-pointer-events .custom-select:after {
+  content: none;
+}
+
+#forumapi {
+ background-repeat: no-repeat;
+ float:right;
+ margin-top: 15px;
+ margin-right: 9px;
+ white-space:nowrap;
+ font-size:12px;
+}
+
+#forumapi span.bttn a {
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+  margin-right: -4px;
+  padding: 7px;
+  border: 1px solid #C9C9C9;
+  background: #f6f6f9;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ebebeb',GradientType=0 );
+}
+
+#forumapi span.forum a {
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#forumapi span.api a {
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+
+/* added class to specify which h3s */
+h3.headerWord {
+/*  line-height: 0px; */
+  display: inline-block;
+  font-family: "Times New Roman";
+  font-size: 25px;
+  margin: 20px 18px 20px 0;
+}
+
+/* for even/odd classes for WR table rows */
+.even{background-color:#ebebf2;vertical-align:top;}
+.odd{vertical-align:top;}
+
+:not(.even) + .even, :not(.odd) + .odd {
+ border-top: 1px solid #DCDCDC;
+}
+
+/*For hover-highlighting*/
+tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:gold;}
+.gold{background-color:gold;vertical-align: top}
+
+p#threadsHeader{
+	font-size:13px !important;
+	font-weight:bold;
+    margin-bottom: 0;
+    padding: 7px 0;
+    text-align: center;
+    border-top:1px solid #DCDCDC;
+}
+
+/*FT divs*/
+.FTsource{
+	padding-left:30px;
+}
+
+.FTlist{
+	padding-left:60px;
+}
+
+/*Take out inline css for tables/tds, put them here in new classes */
+#leftcolumn{
+	width:164px;
+	line-height:1.4;
+	border-right: 1px solid #DCDCDC;
+}
+#centercolumn{
+/* hide this for now*/
+	 /*for IE first*/
+	width:524px;
+	padding:0;
+}
+
+.rightcolumn, #rightcolumn{
+	width:304px;
+/*	border:0 0 0;
+	border-collapse:collapse;*/
+}
+
+/* IE */
+a img {border:0;}
+
+#rightcolumn{
+		border-left: 1px solid #DCDCDC;
+}
+#rightcolumn, #leftcolumn, #centercolumn{
+	vertical-align:top;
+}
+
+.WRD td{
+	padding:2px;
+}
+.WRD td.FrWrd {
+    padding-left: 20px;
+}
+.WRD td.ToWrd{
+	color:black;
+	padding-right:20px;
+}
+
+td.ToEx, td.FrEx{
+	color:gray;
+}
+
+/*old WRD class for to senses*/
+.To2{
+	font-style:italic;
+}
+
+
+/* for notepubls; added important to overwrite .wrd td padding rule*/
+.notePubl{
+	padding-left:20px !important;
+	padding-right:20px !important;
+}
+
+table.WRD{
+	width:100%;
+	border-collapse:collapse;
+	border-top:solid 1px #dcdcdc;
+	border-bottom:solid 1px #dcdcdc;
+	cursor:pointer;
+}
+table.WRD .additional{
+	border-top:solid 1px #dcdcdc;
+}
+
+/*For report error div/link in buildWRD */
+/* now a table, sytle as wrtables */
+.WRreporterror{
+	width:100%;
+	border-collapse:collapse;
+}
+.WRreporterror td {
+	padding-left:2px;
+	padding-right:4px;
+}
+
+/*FTintro padding*/
+#FTintro{padding-top:5px;padding-bottom:5px;}
+
+/*IE PROBLEM*/
+table.rightcolumn{table-layout:fixed;}
+
+tr.more td{
+	border-bottom:1px solid #DCDCDC;
+}
+.POS2{
+	color:#0645ad;
+}
+p.EngInf{
+	font-size:12px !important;
+	padding-bottom:0px;
+	margin-bottom:5px;
+}
+.inflections{
+	margin-left:10px;
+}
+
+tr.wrtopsection td{
+	padding-bottom:7px;
+	padding-top:7px;
+	font-size:13px;
+}
+
+/* for WR copyright line */
+.wrcopyright{
+	font-family:Verdana;
+	margin-left:20px;
+}
+
+/* for XX dictionary note*/
+.note-othersideonly{
+    margin-left:20px;
+    font-size:12px !important;    
+}

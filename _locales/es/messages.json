@@ -1,0 +1,263 @@
+{
+   "about": {
+      "description": "About title in the option page",
+      "message": "Acerca de..."
+   },
+   "affDefault": {
+      "description": "Text to describe default display of languages",
+      "message": "Visualización por defecto:"
+   },
+   "affSelectedText": {
+      "description": "Text to ask if the user wants to have the selected text automaticaly displayed in the search field",
+      "message": "Rellena automáticamente el campo de búsqueda con la palabra seleccionada. \u003Cbr/>\u003Ci>Solo disponible en páginas con formato http, https y ftp. \u003C/i>"
+   },
+   "aren": {
+      "message": "Árabe-Inglés"
+   },
+   "authorTranslation": {
+      "description": "Name of the author of the translation",
+      "message": "Versión en Español: Carlos Moreno/Arnold Pinto/Alejandro Quintana"
+   },
+   "autosearchselect": {
+      "message": "Buscar automáticamente el texto seleccionado."
+   },
+   "autoshowlasttranslation": {
+      "message": "Seleccionar la última traducción utilizada. \u003Cbr>(En lugar de la asignada por defecto)"
+   },
+   "availableTranslations": {
+      "description": "List of the available translations.",
+      "message": "Traducciones disponibles:"
+   },
+   "buttonSearchText": {
+      "description": "Text for the search button",
+      "message": "Buscar"
+   },
+   "caca": {
+      "message": "Catalán: definición"
+   },
+   "conjES": {
+      "message": "Español: conjugación"
+   },
+   "conjFR": {
+      "message": "Francés: conjugación"
+   },
+   "conjIT": {
+      "message": "Italiano: conjugación"
+   },
+   "czen": {
+      "message": "Checo-Inglés"
+   },
+   "deen": {
+      "message": "Alemán-Inglés"
+   },
+   "dees": {
+      "message": "Alemán-Español"
+   },
+   "defaultTranslation": {
+      "description": "Legend for the options page for the choice of the default translation.",
+      "message": "Traducción por defecto:"
+   },
+   "defen": {
+      "message": "Inglés: Definición"
+   },
+   "defes": {
+      "message": "Español: Definición"
+   },
+   "defit": {
+      "message": "Italiano: Definición"
+   },
+   "deletehistory": {
+      "message": "Borrar historial de búsqueda"
+   },
+   "devBy": {
+      "description": "Extension developed by: ",
+      "message": "Extensión desarrollada por: "
+   },
+   "divers": {
+      "message": "Varios"
+   },
+   "dropdown": {
+      "description": "Translation of 'drop down list'",
+      "message": "Lista desplegable"
+   },
+   "enar": {
+      "message": "Inglés-Árabe"
+   },
+   "encol": {
+      "message": "Inglés: Colocaciones"
+   },
+   "encz": {
+      "message": "Inglés-Checho"
+   },
+   "ende": {
+      "message": "Inglés-Alemán"
+   },
+   "enes": {
+      "message": "Inglés-Español"
+   },
+   "enfr": {
+      "message": "Inglés-Francés"
+   },
+   "engr": {
+      "message": "Inglés-Griego"
+   },
+   "enit": {
+      "message": "Inglés-Italiano"
+   },
+   "enja": {
+      "message": "Inglés-Japonés"
+   },
+   "enko": {
+      "message": "Inglés-Coreano"
+   },
+   "ennl": {
+      "message": "Inglés-Holandés"
+   },
+   "enpl": {
+      "message": "Inglés-Polaco"
+   },
+   "enpt": {
+      "message": "Inglés-Portugués"
+   },
+   "enro": {
+      "message": "Inglés-Rumano"
+   },
+   "enru": {
+      "message": "Inglés-Ruso"
+   },
+   "ensv": {
+      "message": "Inglés-Sueco"
+   },
+   "enterAWordToSearch": {
+      "description": "Message shown when the user doesn't type a word to search",
+      "message": "Por favor, introduzca la palabra a buscar."
+   },
+   "enthe": {
+      "message": "Inglés: Sinónimos"
+   },
+   "entr": {
+      "message": "Inglés-Turco"
+   },
+   "enusg": {
+      "message": "Inglés: Uso"
+   },
+   "enzh": {
+      "message": "Inglés-Chino"
+   },
+   "esde": {
+      "message": "Español-Alemán"
+   },
+   "esen": {
+      "message": "Español-Inglés"
+   },
+   "eses": {
+      "message": "Español: definición"
+   },
+   "esfr": {
+      "message": "Español-Francés"
+   },
+   "esit": {
+      "message": "Español-Italiano"
+   },
+   "espt": {
+      "message": "Español-Portugués"
+   },
+   "essin": {
+      "message": "Español: Sinónimos"
+   },
+   "fren": {
+      "message": "Francés-Inglés"
+   },
+   "fres": {
+      "message": "Francés-Español"
+   },
+   "gren": {
+      "message": "Griego-Inglés"
+   },
+   "helpinsitesearch": {
+      "message": "Haz doble clic en una palabra mientras navegas para ver un mensaje emergente con su traducción. Se usará la traducción marcada como favorita o la última que se usó, dependiendo de la configuración."
+   },
+   "history": {
+      "message": "Historial"
+   },
+   "historydeleted": {
+      "message": "Historial borrado."
+   },
+   "historyenabled": {
+      "message": "Historial habilitado."
+   },
+   "insitectrlkey": {
+      "message": "Mantener pulsado Ctrl (Command en Mac) mientras se hace doble clic para activar la búsqueda."
+   },
+   "insitesearchlegend": {
+      "message": "Búsqueda integrada"
+   },
+   "insitesearchselect": {
+      "message": "Doble clic en una palabra muestra automáticamente su traducción\u003Cbr>\u003Ci>(Usando la traducción favorita o la última usada)\u003C/i>"
+   },
+   "iten": {
+      "message": "Italiano-Inglés"
+   },
+   "ites": {
+      "message": "Italiano-Español"
+   },
+   "itit": {
+      "message": "Italiano: definición"
+   },
+   "koen": {
+      "message": "Coreano-Inglés"
+   },
+   "legendTranslations": {
+      "message": "Configuración de la traducción"
+   },
+   "nlen": {
+      "message": "Holandés-Inglés"
+   },
+   "noResult": {
+      "description": "Displayed when no result is found",
+      "message": "No se han encontrado resultados."
+   },
+   "openlinknewtab": {
+      "message": "Abre el enlace en una nueva pestaña"
+   },
+   "optionsPage": {
+      "description": "Name of the option page",
+      "message": "Opciones"
+   },
+   "plen": {
+      "message": "Polaco-Inglés"
+   },
+   "pten": {
+      "message": "Portugués-Inglés"
+   },
+   "ptes": {
+      "message": "Portugués-Español"
+   },
+   "radiobutton": {
+      "description": "Translation of 'radio buttons'",
+      "message": "Botones de radio"
+   },
+   "roen": {
+      "message": "Rumano-Inglés"
+   },
+   "ruen": {
+      "message": "Ruso-Inglés"
+   },
+   "showTranslations": {
+      "description": "Legend for the options page for the choice of the translations to show.",
+      "message": "Mostrar..."
+   },
+   "sven": {
+      "message": "Sueco-Inglés"
+   },
+   "translationsToShow": {
+      "description": "List of the translations to show.",
+      "message": "Traducciones a mostrar:"
+   },
+   "tren": {
+      "message": "Turco-Inglés"
+   },
+   "zhen": {
+      "message": "Chino-Inglés"
+   }
+}
